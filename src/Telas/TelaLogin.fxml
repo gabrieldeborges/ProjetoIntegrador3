@@ -11,7 +11,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0" prefWidth="495.0" style="-fx-background-color: #BAE6DD;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Telas.TelaLoginController">
    <children>
-      <AnchorPane layoutX="112.0" layoutY="17.0" prefHeight="363.0" prefWidth="270.0" style="-fx-background-color: #fff;">
+      <AnchorPane layoutX="112.0" layoutY="-3.0" prefHeight="407.0" prefWidth="270.0" style="-fx-background-color: #fff;">
          <children>
             <TextField fx:id="txtUser" layoutX="40.0" layoutY="175.0" prefHeight="30.0" prefWidth="206.0" promptText="Usuário" />
             <Label layoutX="108.0" layoutY="21.0" minHeight="2.0" minWidth="1.0" prefHeight="30.0" prefWidth="74.0" style="-fx-font-size: 20; -fx-font-weight: 100;" text="LOGIN" textFill="#58af9c">

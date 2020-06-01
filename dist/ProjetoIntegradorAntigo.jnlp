@@ -8,7 +8,8 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="ProjetoIntegradorAntigo.jar" size="1351617" download="eager" />
+    <jar href="ProjetoIntegradorAntigo.jar" size="1361037" download="eager" />
+    <jar href="lib\gson-2.8.2.jar" size="232932" download="eager" />
     <jar href="lib\mysql-connector-java-8.0.18.jar" size="2330539" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="ProjetoIntegradorAntigo" >

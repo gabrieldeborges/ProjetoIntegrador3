@@ -31,7 +31,7 @@
             <Image url="@../Imagens/user.png" />
          </image>
       </ImageView>
-      <Button fx:id="btCampoFut" layoutX="13.0" layoutY="123.0" mnemonicParsing="false" prefHeight="139.0" prefWidth="144.0" style="-fx-background-color: #BDEBE2; -fx-background-radius: 20;" />
+      <Button fx:id="btCampoFut" layoutX="13.0" layoutY="123.0" mnemonicParsing="false" onAction="#AluguelCampo" prefHeight="139.0" prefWidth="144.0" style="-fx-background-color: #BDEBE2; -fx-background-radius: 20;" />
       <Text layoutX="29.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Campo de futebol">
          <font>
             <Font size="14.0" />
@@ -42,7 +42,7 @@
             <Image url="@../Imagens/icons8-futebol-80.png" />
          </image>
       </ImageView>
-      <Button fx:id="btEspacoGate" layoutX="177.0" layoutY="123.0" mnemonicParsing="false" prefHeight="139.0" prefWidth="144.0" style="-fx-background-color: #BDEBE2; -fx-background-radius: 20;" />
+      <Button fx:id="btEspacoGate" layoutX="177.0" layoutY="123.0" mnemonicParsing="false" onAction="#AluguelGateball" prefHeight="139.0" prefWidth="144.0" style="-fx-background-color: #BDEBE2; -fx-background-radius: 20;" />
       <Text layoutX="185.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Espaço para Gateball">
          <font>
             <Font size="14.0" />

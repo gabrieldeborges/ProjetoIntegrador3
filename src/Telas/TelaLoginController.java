@@ -5,6 +5,8 @@
  */
 package Telas;
 
+import Gerenciamento.Exec;
+import Gerenciamento.GerenciamentoUsuario;
 import Telas.util.Alertas;
 import java.io.IOException;
 import java.net.URL;
@@ -22,7 +24,9 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class TelaLoginController implements Initializable {
-
+    
+    public static int idPassa;
+    
     @FXML
     private Button btEntrar;
     @FXML
@@ -81,25 +85,45 @@ public class TelaLoginController implements Initializable {
     }
 
     @FXML
-    private void verificacaoUsuario() throws IOException {
+    private void verificacaoUsuario() throws IOException, Exception {
 
         //Buscar no banco o usuario
         String user = txtUser.getText();
         String senha = pass.getText();
 
-        String retornoDoBanco = "lucas";
-
-        if (user.equalsIgnoreCase(retornoDoBanco)) {
-
-            String senhaRetornada = "123";
-            if (senha.equalsIgnoreCase(senhaRetornada)) {
-                mudarTela();
-            } else {
-
-                Alertas.mostrarAlertas("", "Senha incorreta", "Tente se cadastrar",  Alert.AlertType.ERROR);
-            }
-        } else {
-            Alertas.mostrarAlertas( "","Usuário não identificado", "Tente novamente", Alert.AlertType.ERROR);
+        int entrar = GerenciamentoUsuario.verificar_login(user, senha);
+        
+        if (entrar != -1) { 
+                
+             Parent telaCadastro = FXMLLoader.load(
+                getClass().getResource(
+                        "/Telas/TelaLogin.fxml"
+                )
+        );
+  
+               
+		idPassa = entrar;
+                Exec.idUser = entrar;
+		//TelaHomeController.setId(entrar);
+                //System.out.println("to mandando"+entrar);
+		          System.out.println("Tela 1 " + idPassa);
+                 FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(getClass().getResource("/Telas/TelaHome.fxml"));
+		Parent root = loader.load();
+                
+		Stage stage = new Stage();
+		Scene scene = new Scene(root);
+		stage.setScene(scene);
+		stage.show();
+        Stage fecha = (Stage) btCadastrar.getScene().getWindow();
+        fecha.close();
+        
+       
+        
+        
+    }else{
+            Alertas.mostrarAlertas("Usuário incorreto", "Usuário não encontrado!",
+                 "Verifique o login e senha e tente novamente", Alert.AlertType.ERROR);
         }
-    }
+}
 }

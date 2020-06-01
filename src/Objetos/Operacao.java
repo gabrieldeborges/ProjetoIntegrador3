@@ -6,17 +6,17 @@ import java.time.LocalDate;
 
 public class Operacao {
     
-    public Usuario usuario;
+    public int iduser;
     public LocalDate data;
-    public String unidade;
+    public int idEquip;
 
     public Operacao() {
     }
 
-    public Operacao(Usuario usuario, LocalDate data, String unidade) {
-        this.usuario = usuario;
+    public Operacao(int idUser, LocalDate data, int idEquip) {
+        this.idEquip = idEquip;
         this.data = data;
-        this.unidade = unidade;
+        this.iduser = idUser;
     }
     
     

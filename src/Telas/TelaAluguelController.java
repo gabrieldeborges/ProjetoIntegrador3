@@ -25,6 +25,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+
+
 /**
  *
  * @author Lucas Filipe
@@ -33,6 +35,8 @@ public class TelaAluguelController implements Initializable {
 
       DetalheObj d = new DetalheObj();
        
+      
+      public static String modalidade;
     
     @FXML
     private Button btCampoFut;
@@ -154,6 +158,31 @@ public class TelaAluguelController implements Initializable {
         c.PopularTela(d);
        
        }
+
+    @FXML
+    private void AluguelCampo(ActionEvent event) throws IOException {
+         Stage stage = new Stage();
+       
+       Parent confirma = FXMLLoader.load(
+                getClass().getResource(
+                        "/Telas/TelaAluguelConfirmacao.fxml"
+                )
+        );
+        
+       
+        modalidade = "CAMPO DE FUTEBOL";
+
+        Scene scene = new Scene(confirma);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+        
+        
+    }
+
+    @FXML
+    private void AluguelGateball(ActionEvent event) {
+    }
     
 
                

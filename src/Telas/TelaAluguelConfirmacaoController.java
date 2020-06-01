@@ -6,7 +6,9 @@
 package Telas;
 
 import Gerenciamento.GerenciamentoOperacao;
+import Gerenciamento.Unidade;
 import Objetos.Operacao;
+import Telas.util.Alertas;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -21,9 +23,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 /**
@@ -33,7 +40,8 @@ import javafx.stage.Stage;
  */
 public class TelaAluguelConfirmacaoController implements Initializable {
 
-    @FXML
+    String tipoEquipamento;
+    
     private ComboBox<String> cbUnidade;
     private ObservableList<String> obsListUnidade;
     @FXML
@@ -42,71 +50,53 @@ public class TelaAluguelConfirmacaoController implements Initializable {
     private Button btConfirmar;
 
     GerenciamentoOperacao gerenOperacao = new GerenciamentoOperacao();
+    @FXML
+    private TableColumn<Unidade, String> colunaUnidade;
+    @FXML
+    private TableColumn<Unidade, String> colunaBairro;
+    @FXML
+    private TableColumn<Unidade, Integer> colunaAvaliacao;
+    @FXML
+    private TableColumn<Unidade, String> distancia;
+    @FXML
+    private TableView<Unidade> tblUnidades;
+    @FXML
+    private TextField txtCEPMANDA;
+    @FXML
+    private TableColumn<Unidade, Integer> colunaID;
 
-    public void confirmacao() {
-        Operacao operacao = new Operacao();
-        
-        operacao.unidade = cbUnidade.getValue();
-        operacao.data = dtData.getValue();
-        
+    public void confirmacao() throws Exception {
+   
     }
 
+    
+    public void setTipo(String tipo){
+        
+        tipoEquipamento = tipo;
+        
+    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
+         colunaUnidade.setCellValueFactory(
+                new PropertyValueFactory("Unidade")
+        );
+        colunaBairro.setCellValueFactory(
+                new PropertyValueFactory("Bairro")
+        );
+        
+        colunaAvaliacao.setCellValueFactory(
+                new PropertyValueFactory("avaliacao")
+        );
+        distancia.setCellValueFactory(
+                new PropertyValueFactory("distancia")
+        );
+        colunaID.setCellValueFactory(
+                new PropertyValueFactory("id")
+        );
+        }
 
-        List<String> listUnidade = new ArrayList<String>();
-        listUnidade.add("BALNEARIO CARLOS JOEL NELLI");
-        listUnidade.add("BALNEARIO GERALDO ALONSO");
-        listUnidade.add("BALNEARIO JALISCO");
-        listUnidade.add("BALNEARIO MARIO MORAES");
-        listUnidade.add("BALNEARIO PRINCESA ISABEL");
-        listUnidade.add("CEE ALFREDO IGNACIO TRINDADE");
-        listUnidade.add("CEE AURELIO DE CAMPOS");
-        listUnidade.add("CEE EDSON ARANTES DO NASCIMENTO");
-        listUnidade.add("CEE FLAVIO CALABRESI CONTE");
-        listUnidade.add("CEE GERALDO JOSE DE ALMEIDA");
-        listUnidade.add("CEE JOERG BRUDER");
-        listUnidade.add("CEE JOSE ERMIRIO DE MORAES");
-        listUnidade.add("CEE LUIZ MARTINEZ");
-        listUnidade.add("CEE MANE GARRINCHA");
-        listUnidade.add("CEE OSWALDO BRANDAO");
-        listUnidade.add("CEE RAUL TABAJARA");
-        listUnidade.add("CEE RIYUSO OGAWA");
-        listUnidade.add("CEE RUBENS PECCE LORDELLO");
-        listUnidade.add("CEE SALIM FARAH MALUF");
-        listUnidade.add("CEE SOLANGE NUNES BIBAS");
-        listUnidade.add("CEE THOMAZ MAZZONI");
-        listUnidade.add("CEE VICENTE ITALO FEOLA");
-        listUnidade.add("CEL ANDRE VITAL RIBEIRO SOARES");
-        listUnidade.add("CEL BRIGADEIRO EDUARDO GOMES");
-        listUnidade.add("CEL BRIGADEIRO EDUARDO GOMES");
-        listUnidade.add("CEL JOSE BONIFACIO");
-        listUnidade.add("CEL JUSCELINO KUBITSCHEK");
-        listUnidade.add("CEL MODELODROMO DO IBIRAPUERA");
-        listUnidade.add("CEL PADRE  JOSE DE ANCHIETA");
-        listUnidade.add("CEL PERUS");
-        listUnidade.add("CEL TEOTONIO VILELA");
-        listUnidade.add("CENTRO DE ESPORTES RADICAIS");
-        listUnidade.add("CENTRO ESPORTIVO NAUTICO GUARAPIRANGA");
-        listUnidade.add("CENTRO ESPORTIVO, RECREATIVO E EDUCATIVO DO TRABALHADOR");
-        listUnidade.add("CENTRO ESPORTIVO TIETE");
-        listUnidade.add("CENTRO OLIMPICO DE TREINAMENTO E PESQUISA");
-        listUnidade.add("ESTADIO MUNICIPAL JACK MARIN");
-        listUnidade.add("ESTADIO MUNICIPAL MIE NISHI");
-        listUnidade.add("ESTADIO MUNICIPAL PAULO MACHADO DE CARVALHO");
-        listUnidade.add("GINASIO ESPORTIVO DARCY REIS");
-        listUnidade.add("MINI BALNEARIO IRMAOS PAOLILLO	");
-        listUnidade.add("MINI BALNEARIO  MARECHAL ESPIRIDIAO ROSA");
-        listUnidade.add("MINI BALNEARIO ANTONIO CARLOS DE ABREU SODRE");
-        listUnidade.add("MINI BALNEARIO COMANDANTE GARCIA DAVILA");
-        listUnidade.add("MINI BALNEARIO COMANDANTE GASTAO MOUTINHO");
-        listUnidade.add("MINI BALNEARIO JOSE MARIA WHITAKER");
-        listUnidade.add("MINI BALNEARIO MINISTRO SINESIO ROCHA");
-        obsListUnidade = FXCollections.observableArrayList(listUnidade);
-        cbUnidade.setItems(obsListUnidade);
-    }
-
-    @FXML
     private void entrar(ActionEvent event) throws IOException {
 
         Stage stage = new Stage();
@@ -124,5 +114,54 @@ public class TelaAluguelConfirmacaoController implements Initializable {
 
         Stage fecha = (Stage) btConfirmar.getScene().getWindow();
         fecha.close();
+    }
+
+    @FXML
+    private void buscarDistancia(ActionEvent event) throws Exception {
+        tblUnidades.getItems().clear();
+
+        //Obtém os resultados de pesquisa do mock
+        
+        if (txtCEPMANDA.getText()!=null && TelaAluguelController.modalidade != null){
+        
+            List resultados = GerenciamentoOperacao.listar(txtCEPMANDA.getText(), TelaAluguelController.modalidade);
+
+        //Se há resultados, atualiza a tabela
+        if (resultados != null) {
+            tblUnidades.setItems(
+                    FXCollections.observableArrayList(resultados)
+            );
+        }
+        
+        }else{
+             Alertas.mostrarAlertas("Erro", "CEP não preenchido",
+                 "Favor preencher o campo e realizar a busca novamente", Alert.AlertType.ERROR);
+        }
+        
+    }
+
+    @FXML
+    private void realizaAluguel(ActionEvent event) throws Exception {
+             Operacao operacao = new Operacao();
+        
+        Unidade unidades = tblUnidades.getSelectionModel().getSelectedItem();
+        
+        if(unidades != null && dtData.getValue()!= null){
+            
+            
+        operacao.iduser = TelaLoginController.idPassa;
+        operacao.idEquip = unidades.getId();
+        operacao.data = dtData.getValue();
+        GerenciamentoOperacao.AdicionaAluguel(operacao);
+        Alertas.mostrarAlertas("Parabéns!", "Aluguel foi feito com sucesso!",
+                 "Sua unidade foi alugada e estará disponível no dia "+dtData.getValue()+ " Favor trazer os seus documentos atualizados para a utilização do espaço.", Alert.AlertType.CONFIRMATION);
+       
+        }
+        else{
+             Alertas.mostrarAlertas("Alerta", "Informações não preenchidas",
+                 "Por favor selecione uma unidade na tabela e selcione uma data!", Alert.AlertType.INFORMATION);
+        }
+        
+        
     }
 }

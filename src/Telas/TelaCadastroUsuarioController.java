@@ -140,7 +140,7 @@ public class TelaCadastroUsuarioController implements Initializable {
         usuario.propSenha = senha.getText();
         usuario.dtNascimento = dpDataNascimento.getValue();
         usuario.propConfirmarSenha = confirmarSenha.getText();
-          usuario.dtNascimento = dpDataNascimento.getValue();
+        usuario.dtNascimento = dpDataNascimento.getValue();
         usuario.unidadePref = (String) cbUnidadePref.getValue();
         usuario.esportePref = (String) cbEsportePref.getValue();
         usuario.Sexo = cbSexo.getValue();
