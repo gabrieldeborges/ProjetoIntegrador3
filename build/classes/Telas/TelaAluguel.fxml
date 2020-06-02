@@ -53,7 +53,7 @@
             <Image url="@../Imagens/icons8-ajuda-30.png" />
          </image>
       </ImageView>
-      <Button fx:id="btPiscina" layoutX="348.0" layoutY="123.0" mnemonicParsing="false" prefHeight="139.0" prefWidth="144.0" style="-fx-background-color: #BDEBE2; -fx-background-radius: 20;" />
+      <Button fx:id="btPiscina" layoutX="348.0" layoutY="123.0" mnemonicParsing="false" onAction="#AluguelPiscina" prefHeight="139.0" prefWidth="144.0" style="-fx-background-color: #BDEBE2; -fx-background-radius: 20;" />
       <Text layoutX="399.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Piscinas">
          <font>
             <Font size="14.0" />
@@ -64,7 +64,7 @@
             <Image url="@../Imagens/icons8-ajuda-30.png" />
          </image>
       </ImageView>
-      <Button fx:id="btEspacoPet" layoutX="519.0" layoutY="123.0" mnemonicParsing="false" prefHeight="139.0" prefWidth="144.0" style="-fx-background-color: #BDEBE2; -fx-background-radius: 20;" />
+      <Button fx:id="btEspacoPet" layoutX="519.0" layoutY="123.0" mnemonicParsing="false" onAction="#AlugarPet" prefHeight="139.0" prefWidth="144.0" style="-fx-background-color: #BDEBE2; -fx-background-radius: 20;" />
       <Text layoutX="558.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Espaço Pet">
          <font>
             <Font size="14.0" />
@@ -75,7 +75,7 @@
             <Image url="@../Imagens/icons8-ajuda-30.png" />
          </image>
       </ImageView>
-      <Button fx:id="btCampoSociety" layoutX="682.0" layoutY="123.0" mnemonicParsing="false" prefHeight="139.0" prefWidth="144.0" style="-fx-background-color: #BDEBE2; -fx-background-radius: 20;" />
+      <Button fx:id="btCampoSociety" layoutX="682.0" layoutY="123.0" mnemonicParsing="false" onAction="#AlugarSociety" prefHeight="139.0" prefWidth="144.0" style="-fx-background-color: #BDEBE2; -fx-background-radius: 20;" />
       <Text layoutX="708.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Campo Society">
          <font>
             <Font size="14.0" />
@@ -86,7 +86,7 @@
             <Image url="@../Imagens/icons8-ajuda-30.png" />
          </image>
       </ImageView>
-      <Button fx:id="btPistaSkt" layoutX="264.0" layoutY="294.0" mnemonicParsing="false" prefHeight="139.0" prefWidth="144.0" style="-fx-background-color: #BDEBE2; -fx-background-radius: 20;" />
+      <Button fx:id="btPistaSkt" layoutX="264.0" layoutY="294.0" mnemonicParsing="false" onAction="#AlufarPista" prefHeight="139.0" prefWidth="144.0" style="-fx-background-color: #BDEBE2; -fx-background-radius: 20;" />
       <Text layoutX="290.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pistas de Skate">
          <font>
             <Font size="14.0" />
@@ -97,7 +97,7 @@
             <Image url="@../Imagens/icons8-ajuda-30.png" />
          </image>
       </ImageView>
-      <Button fx:id="btQuadra" layoutX="443.0" layoutY="294.0" mnemonicParsing="false" prefHeight="139.0" prefWidth="144.0" style="-fx-background-color: #BDEBE2; -fx-background-radius: 20;" />
+      <Button fx:id="btQuadra" layoutX="443.0" layoutY="294.0" mnemonicParsing="false" onAction="#AlugarQuadras" prefHeight="139.0" prefWidth="144.0" style="-fx-background-color: #BDEBE2; -fx-background-radius: 20;" />
       <Text layoutX="449.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quadras Poliesportivas">
          <font>
             <Font size="13.0" />

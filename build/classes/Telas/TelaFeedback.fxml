@@ -7,43 +7,43 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="396.0" prefWidth="532.0" style="-fx-background-color: #58AF9C;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Telas.TelaFeedbackController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="396.0" prefWidth="532.0" style="-fx-background-color: #58AF9C;" stylesheets="@teste.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Telas.TelaFeedbackController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="410.0" layoutX="78.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="375.0" />
-      <Text layoutX="112.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem vindo de volta,">
+      <Text fx:id="lblVindo" layoutX="92.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem vindo de volta">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Text>
-      <Label fx:id="lblNomeEntra" layoutX="346.0" layoutY="27.0" text="NOME">
-         <font>
-            <Font name="System Bold" size="24.0" />
-         </font>
-      </Label>
-      <Text fx:id="lblTipoLocal" layoutX="91.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Como foi o seu último o Aluguel da XX">
+      <Text fx:id="lblTipoLocal" layoutX="109.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Como foi o seu último o Aluguel da">
          <font>
             <Font size="20.0" />
          </font>
       </Text>
-      <Text layoutX="97.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deixe seu feedback para usuários futuros!">
+      <Text layoutX="99.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deixe seu feedback para usuários futuros!">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Button fx:id="btMtRuim" layoutX="94.0" layoutY="208.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="57.0" style="-fx-shape: &quot;M 100 0 L175 200 L0 75 L200 75 L25 200 Z&quot;;" textFill="WHITE" />
-      <Button fx:id="btRuim" layoutX="160.0" layoutY="208.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="57.0" style="-fx-shape: &quot;M 100 0 L175 200 L0 75 L200 75 L25 200 Z&quot;; -fx-background-color: gold;" textFill="WHITE" />
-      <Button fx:id="btNormal" layoutX="228.0" layoutY="208.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="57.0" style="-fx-shape: &quot;M 100 0 L175 200 L0 75 L200 75 L25 200 Z&quot;;" textFill="WHITE" />
-      <Button fx:id="btBom" layoutX="295.0" layoutY="208.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="57.0" style="-fx-shape: &quot;M 100 0 L175 200 L0 75 L200 75 L25 200 Z&quot;; -fx-background-color: gold;" textFill="WHITE" />
-      <Button fx:id="btMtBom" layoutX="371.0" layoutY="208.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="57.0" style="-fx-shape: &quot;M 100 0 L175 200 L0 75 L200 75 L25 200 Z&quot;;" textFill="WHITE" />
-      <Text fx:id="lblUnidade" layoutX="98.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Da unidade XXXXXXXXXX da prefeitura?">
+      <Button fx:id="bt1" layoutX="92.0" layoutY="238.0" mnemonicParsing="false" onAction="#guardaCor1" onMouseEntered="#trocaCor1" prefHeight="58.0" prefWidth="57.0" style="-fx-shape: &quot;M 100 0 L175 200 L0 75 L200 75 L25 200 Z&quot;;" textFill="WHITE" />
+      <Button fx:id="bt2" layoutX="158.0" layoutY="238.0" mnemonicParsing="false" onAction="#guardaCor2" onMouseEntered="#trocaCor2" prefHeight="58.0" prefWidth="57.0" style="-fx-shape: &quot;M 100 0 L175 200 L0 75 L200 75 L25 200 Z&quot;;" textFill="WHITE" />
+      <Button fx:id="bt3" layoutX="226.0" layoutY="238.0" mnemonicParsing="false" onAction="#guardaCor3" onMouseEntered="#trocaCor3" prefHeight="58.0" prefWidth="57.0" style="-fx-shape: &quot;M 100 0 L175 200 L0 75 L200 75 L25 200 Z&quot;;" textFill="WHITE" />
+      <Button fx:id="bt4" layoutX="293.0" layoutY="238.0" mnemonicParsing="false" onAction="#guardaCor4" onMouseEntered="#trocaCor4" prefHeight="58.0" prefWidth="57.0" style="-fx-shape: &quot;M 100 0 L175 200 L0 75 L200 75 L25 200 Z&quot;;" textFill="WHITE" />
+      <Button fx:id="bt5" layoutX="369.0" layoutY="238.0" mnemonicParsing="false" onAction="#guardaCor5" onMouseEntered="#trocaCor5" prefHeight="58.0" prefWidth="57.0" style="-fx-shape: &quot;M 100 0 L175 200 L0 75 L200 75 L25 200 Z&quot;;" styleClass="bt5" textFill="WHITE" />
+      <Text fx:id="retornaDia" layoutX="154.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No dia: ">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Button fx:id="btnEntrar" layoutX="201.0" layoutY="317.0" mnemonicParsing="false" onAction="#entrar" prefHeight="29.0" prefWidth="112.0" style="-fx-background-color: #58AF9C; -fx-background-radius: 17;" text="Enviar" textFill="WHITE">
+      <Button fx:id="btnEntrar" layoutX="203.0" layoutY="329.0" mnemonicParsing="false" onAction="#entrar" prefHeight="29.0" prefWidth="112.0" style="-fx-background-color: #58AF9C; -fx-background-radius: 17;" text="Enviar" textFill="WHITE">
          <font>
             <Font size="13.0" />
          </font>
       </Button>
+      <Label fx:id="trazModalidade" layoutX="197.0" layoutY="92.0" text="trazModalidade">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

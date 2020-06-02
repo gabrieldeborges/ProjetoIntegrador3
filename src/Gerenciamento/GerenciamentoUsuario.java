@@ -5,6 +5,7 @@
  */
 package Gerenciamento;
 
+import static Gerenciamento.GerenciamentoOperacao.verificaDistancia;
 import Objetos.Usuario;
 import java.sql.Connection;
 import java.sql.Date;
@@ -172,5 +173,71 @@ public class GerenciamentoUsuario {
         return retorna;
         
     }
+    
+    public static List<Unidade> listar(String cep, String modalidade)
+            throws Exception {
+
+        //Monta a string de listagem de clientes no banco, considerando
+        //apenas a coluna de ativação de clientes ("enabled")
+        String sql = "SELECT * FROM LISTAS_EQUIPAMENTOS where EQUIPAMENTOS = ?";
+
+        //Lista de clientes de resultado
+        List<Unidade> listaUnidade = null;
+
+        //Conexão para abertura e fechamento
+        Connection connection = null;
+        //Statement para obtenção através da conexão e execução de
+        //comandos SQL
+        PreparedStatement preparedStatement = null;
+        //Armazenarã os resultados do banco de dados
+        ResultSet result = null;
+
+        //Abre uma conexão com o banco de dados
+        connection = ConnectionUtils.getConnection();
+
+        //Cria um statement para execução de instruçães SQL
+        preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setString(1, modalidade);
+
+        
+        //Executa a consulta SQL no banco de dados
+        result = preparedStatement.executeQuery();
+
+        //Itera por cada item do resultado
+        while (result.next()) {
+
+            //Se a lista não foi inicializada, a inicializa
+            if (listaUnidade == null) {
+                listaUnidade = new ArrayList<Unidade>();
+            }
+
+            //Cria uma instância de Cliente e popula com os valores do BD
+            Unidade unid = new Unidade();
+            
+            unid.setUnidade(result.getString("UNIDADE_ESPORTIVA"));
+            unid.setBairro(result.getString("DISTRITO"));
+            unid.setAvaliacao(result.getInt("avaliacao"));
+            unid.setId(result.getInt("ID"));
+            String dist = verificaDistancia(result.getString("CEP"), cep);
+            
+            unid.setDistancia(dist);
+                        listaUnidade.add(unid);
+
+        }
+
+        //Fecha o result        
+        result.close();
+
+        //Fecha o statement
+        preparedStatement.close();
+
+        //Fecha a conexão
+        connection.close();
+
+        //Retorna a lista de clientes do banco de dados
+        return listaUnidade;
+    }
+
+    
     
 }

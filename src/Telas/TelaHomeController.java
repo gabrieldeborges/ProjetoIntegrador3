@@ -62,9 +62,15 @@ public class TelaHomeController implements Initializable {
            bemV += ", " + GerenciamentoUsuario.RetornaUser(TelaLoginController.idPassa);
            lblBemVindo.setText(bemV);
         
+           
+           
+           
+           
         } catch (Exception ex) {
             Logger.getLogger(TelaHomeController.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        
         
         
         

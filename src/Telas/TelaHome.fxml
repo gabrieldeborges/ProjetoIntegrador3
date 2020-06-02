@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
@@ -35,19 +34,15 @@
       </ImageView>
       <TableView fx:id="tblAtivos" layoutX="112.0" layoutY="132.0" prefHeight="224.0" prefWidth="622.0">
         <columns>
-          <TableColumn prefWidth="146.0" text="Data solicitação" />
-          <TableColumn fx:id="TBAlugueis" prefWidth="193.0" text="Unidade" />
-            <TableColumn prefWidth="165.0" text="Data do aluguel" />
-            <TableColumn prefWidth="117.0" text="Ações (inserir botões" />
+          <TableColumn fx:id="colunaEspaço" prefWidth="170.0" text="Espaço" />
+          <TableColumn fx:id="tbunidade" prefWidth="317.0" text="Unidade" />
+            <TableColumn fx:id="colunaData" prefWidth="134.0" text="Data do aluguel" />
         </columns>
       </TableView>
-      <Text layoutX="326.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ALUGUEIS ATIVOS">
+      <Text layoutX="296.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SEUS ALUGUEIS ATIVOS">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <Button fx:id="btSair" layoutX="189.0" layoutY="396.0" mnemonicParsing="false" onAction="#testeacrtion" text="Sair" />
-      <Button fx:id="btCancelar" layoutX="420.0" layoutY="396.0" mnemonicParsing="false" text="Cancelar" />
-      <Button fx:id="btConfirmar" layoutX="621.0" layoutY="396.0" mnemonicParsing="false" text="Confirmar" />
    </children>
 </AnchorPane>

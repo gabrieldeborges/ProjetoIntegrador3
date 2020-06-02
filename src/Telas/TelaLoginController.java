@@ -6,6 +6,7 @@
 package Telas;
 
 import Gerenciamento.Exec;
+import static Gerenciamento.GerenciamentoOperacao.verificaFeedback;
 import Gerenciamento.GerenciamentoUsuario;
 import Telas.util.Alertas;
 import java.io.IOException;
@@ -26,6 +27,8 @@ import javafx.stage.Stage;
 public class TelaLoginController implements Initializable {
     
     public static int idPassa;
+    
+    public static int idEquip;
     
     @FXML
     private Button btEntrar;
@@ -92,14 +95,49 @@ public class TelaLoginController implements Initializable {
         String senha = pass.getText();
 
         int entrar = GerenciamentoUsuario.verificar_login(user, senha);
-        
+        //entra nesse if se usuario existir
         if (entrar != -1) { 
                 
-             Parent telaCadastro = FXMLLoader.load(
-                getClass().getResource(
-                        "/Telas/TelaLogin.fxml"
-                )
-        );
+            
+            int equip = verificaFeedback(entrar);
+            System.out.println("entrou na dasda" +equip);
+            
+            
+            if(equip != -1){
+            
+            
+  
+                idEquip = equip;
+		idPassa = entrar;
+               // Exec.idUser = entrar;
+		//TelaHomeController.setId(entrar);
+                //System.out.println("to mandando"+entrar);
+		      
+                
+                FXMLLoader loader2 = new FXMLLoader();
+		loader2.setLocation(getClass().getResource("/Telas/TelaFeedback.fxml"));
+		Parent root1 = loader2.load();
+                
+		Stage stage2 = new Stage();
+		Scene scene2 = new Scene(root1);
+                stage2.setResizable(false);
+                stage2.setTitle("Avaliação");
+		stage2.setScene(scene2);
+		stage2.show();
+                
+                
+                
+        Stage fecha = (Stage) btEntrar.getScene().getWindow();
+        fecha.close();
+            
+        
+        
+        
+                }else{ 
+                
+                
+                //caso o ususario não tenha local para avaliar
+            
   
                
 		idPassa = entrar;
@@ -113,17 +151,20 @@ public class TelaLoginController implements Initializable {
                 
 		Stage stage = new Stage();
 		Scene scene = new Scene(root);
+                stage.setResizable(false);
 		stage.setScene(scene);
 		stage.show();
         Stage fecha = (Stage) btCadastrar.getScene().getWindow();
         fecha.close();
         
-       
-        
-        
-    }else{
-            Alertas.mostrarAlertas("Usuário incorreto", "Usuário não encontrado!",
-                 "Verifique o login e senha e tente novamente", Alert.AlertType.ERROR);
-        }
+                       
+            
+            
+            }
+            }else{ Alertas.mostrarAlertas("Usuário incorreto", "Usuário não encontrado!",
+                             "Verifique o login e senha e tente novamente", Alert.AlertType.ERROR);
+            
+           }
+            
 }
 }

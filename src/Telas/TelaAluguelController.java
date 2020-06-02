@@ -33,7 +33,9 @@ import javafx.stage.Stage;
  */
 public class TelaAluguelController implements Initializable {
 
-      DetalheObj d = new DetalheObj();
+    
+    //guarda objeto para ser mandado para popular a tela de detalhes
+      DetalheObj d;
        
       
       public static String modalidade;
@@ -162,8 +164,10 @@ public class TelaAluguelController implements Initializable {
     @FXML
     private void AluguelCampo(ActionEvent event) throws IOException {
          Stage stage = new Stage();
-       
-       Parent confirma = FXMLLoader.load(
+         
+         
+         
+         Parent confirma = FXMLLoader.load(
                 getClass().getResource(
                         "/Telas/TelaAluguelConfirmacao.fxml"
                 )
@@ -182,6 +186,26 @@ public class TelaAluguelController implements Initializable {
 
     @FXML
     private void AluguelGateball(ActionEvent event) {
+    }
+
+    @FXML
+    private void AluguelPiscina(ActionEvent event) {
+    }
+
+    @FXML
+    private void AlugarPet(ActionEvent event) {
+    }
+
+    @FXML
+    private void AlugarSociety(ActionEvent event) {
+    }
+
+    @FXML
+    private void AlufarPista(ActionEvent event) {
+    }
+
+    @FXML
+    private void AlugarQuadras(ActionEvent event) {
     }
     
 

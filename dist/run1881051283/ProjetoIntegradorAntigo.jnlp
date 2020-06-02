@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="ProjetoIntegradorAntigo.jnlp">
+  <information>
+    <title>ProjetoIntegradorAntigo</title>
+    <vendor>LUANA</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="ProjetoIntegradorAntigo.jar" size="1362487" download="eager" />
+    <jar href="lib\gson-2.8.2.jar" size="232932" download="eager" />
+    <jar href="lib\mysql-connector-java-8.0.18.jar" size="2330539" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="ProjetoIntegradorAntigo" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="projetointegrador3.ProjetoIntegrador3"  name="ProjetoIntegradorAntigo" />
+  <update check="always"/>
+</jnlp>
