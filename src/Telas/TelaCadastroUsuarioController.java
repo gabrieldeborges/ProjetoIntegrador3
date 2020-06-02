@@ -7,6 +7,7 @@ package Telas;
 
 import Gerenciamento.GerenciamentoUsuario;
 import Objetos.Usuario;
+import Telas.util.Validacoes;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -76,10 +77,8 @@ public class TelaCadastroUsuarioController implements Initializable {
     private ObservableList<String> obsListEsporte;
     @FXML
     private ChoiceBox<String> cbUnidadePref;
-     private ObservableList<String> obsListUnidade;
+    private ObservableList<String> obsListUnidade;
 
-    
-    
     GerenciamentoUsuario gerUsuario = new GerenciamentoUsuario();
     @FXML
     private GridPane GPInformacoes;
@@ -123,29 +122,35 @@ public class TelaCadastroUsuarioController implements Initializable {
     public void confirmarCadastro() throws Exception {
         Usuario usuario = new Usuario();
 
-        usuario.propNome = txtNome.getText();
-        usuario.propSobrenome = txtSobrenome.getText();
-        usuario.propEmail = txtEmail.getText();
-        usuario.propCidade = txtCidade.getText();
-        usuario.propPais = txtPais.getText();
-        usuario.propCpf = txtCpf.getText();
-        usuario.propNomeMae = txtNomeMae.getText();
-        usuario.propCep = txtCep.getText();
-        usuario.propEndereco = txtEndereco.getText();
-        usuario.propNumero = txtNumero.getText();
-        usuario.propComplemento = txtComplemento.getText();
-        usuario.propBairro = txtBairro.getText();
-        usuario.propCidadeRes = txtCidadeRes.getText();
-        usuario.propUf = txtUf.getText();
-        usuario.propSenha = senha.getText();
-        usuario.dtNascimento = dpDataNascimento.getValue();
-        usuario.propConfirmarSenha = confirmarSenha.getText();
-        usuario.dtNascimento = dpDataNascimento.getValue();
-        usuario.unidadePref = (String) cbUnidadePref.getValue();
-        usuario.esportePref = (String) cbEsportePref.getValue();
-        usuario.Sexo = cbSexo.getValue();
+        boolean teste;
+        do {
+            usuario.propNome = txtNome.getText();
+            usuario.propSobrenome = txtSobrenome.getText();
+            usuario.propEmail = txtEmail.getText();
+            usuario.propCidade = txtCidade.getText();
+            usuario.propPais = txtPais.getText();
+            usuario.propCpf = txtCpf.getText();
+            Validacoes.validarCPF(usuario.propCpf);
+            usuario.propNomeMae = txtNomeMae.getText();
+            usuario.propCep = txtCep.getText();
+            usuario.propEndereco = txtEndereco.getText();
+            usuario.propNumero = txtNumero.getText();
+            usuario.propComplemento = txtComplemento.getText();
+            usuario.propBairro = txtBairro.getText();
+            usuario.propCidadeRes = txtCidadeRes.getText();
+            usuario.propUf = txtUf.getText();
+            usuario.propSenha = senha.getText();
+            usuario.dtNascimento = dpDataNascimento.getValue();
+            usuario.propConfirmarSenha = confirmarSenha.getText();
+            usuario.dtNascimento = dpDataNascimento.getValue();
+            usuario.unidadePref = (String) cbUnidadePref.getValue();
+            usuario.esportePref = (String) cbEsportePref.getValue();
+            usuario.Sexo = cbSexo.getValue();
+            teste = Validacoes.validarCampoVazio(usuario.propNome, usuario.propEmail, usuario.propSenha);
+
+        } while (teste == true);
         gerUsuario.inserir(usuario);
-       
+
         Stage stage = new Stage();
 
         Parent telaAluguel = FXMLLoader.load(
@@ -165,7 +170,7 @@ public class TelaCadastroUsuarioController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+
         List<String> listUnidade = new ArrayList<String>();
         listUnidade.add("BALNEARIO CARLOS JOEL NELLI");
         listUnidade.add("BALNEARIO GERALDO ALONSO");
@@ -216,7 +221,7 @@ public class TelaCadastroUsuarioController implements Initializable {
         listUnidade.add("MINI BALNEARIO MINISTRO SINESIO ROCHA");
         obsListUnidade = FXCollections.observableArrayList(listUnidade);
         cbUnidadePref.setItems(obsListUnidade);
-        
+
         List<String> listEsporte = new ArrayList<String>();
         listEsporte.add("Futebol");
         listEsporte.add("Vôlei");
@@ -228,22 +233,20 @@ public class TelaCadastroUsuarioController implements Initializable {
         listEsporte.add("Skate");
         listEsporte.add("Natação");
         listEsporte.add("Outros...");
-        
+
         obsListEsporte = FXCollections.observableArrayList(listEsporte);
         cbEsportePref.setItems(obsListEsporte);
-        
-        
-         List<String> listSexo = new ArrayList<String>();
+
+        List<String> listSexo = new ArrayList<String>();
         listSexo.add("Masculino");
         listSexo.add("Feminino");
         listSexo.add("Outros");
         obsListSexo = FXCollections.observableArrayList(listSexo);
         cbSexo.setItems(obsListSexo);
-       
+
     }
 
     private void entrar(ActionEvent event) throws IOException {
 
-        
     }
 }

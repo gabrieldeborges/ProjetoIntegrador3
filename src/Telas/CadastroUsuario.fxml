@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="734.0" style="-fx-background-color: #96d6c8;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Telas.TelaCadastroUsuarioController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="734.0" style="-fx-background-color: #96d6c8;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Telas.TelaCadastroUsuarioController">
    <children>
       <Label layoutX="186.0" layoutY="14.0" text="Formulário de cadastro de usuários" textFill="WHITE">
          <font>
@@ -47,10 +47,13 @@
          <children>
             <Label fx:id="LBLCPF" text="Sobrenome*" GridPane.rowIndex="1">
                <font>
-                  <Font name="System Bold" size="14.0" />
+                  <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label fx:id="LBLRG" text="E-mail" GridPane.rowIndex="2" />
+            <Label fx:id="LBLRG" text="E-mail*" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
             <Label fx:id="LBLEndereco" text="Cidade" GridPane.rowIndex="3" />
             <Label fx:id="LBLTelefone" GridPane.rowIndex="4" />
             <Label fx:id="LBLEmail" text="CPF" GridPane.rowIndex="5" />
@@ -68,7 +71,7 @@
             <ChoiceBox fx:id="cbUnidadePref" prefHeight="25.0" prefWidth="172.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
             <Label fx:id="LBLCPF2" prefHeight="20.0" prefWidth="94.0" text="Nome*" textFill="#0a0a0a">
                <font>
-                  <Font name="System Bold" size="14.0" />
+                  <Font name="System Bold" size="12.0" />
                </font>
             </Label>
             <Label text="Esporte Favorito" GridPane.rowIndex="8" />
@@ -98,9 +101,9 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <Label fx:id="LBLCPF1" text="Número" GridPane.rowIndex="2">
+            <Label fx:id="LBLCPF1" text="Número*" GridPane.rowIndex="2">
                <font>
-                  <Font name="System Bold" size="14.0" />
+                  <Font name="System Bold" size="12.0" />
                </font>
             </Label>
             <Label fx:id="LBLRG1" text="Bairro" GridPane.rowIndex="4" />
@@ -120,7 +123,11 @@
             <Label text="Endereço" GridPane.rowIndex="1" />
             <TextField fx:id="txtEndereco" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <TextField fx:id="txtUf" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <Label text="CEP" />
+            <Label text="CEP*">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
             <TextField fx:id="txtCep" GridPane.columnIndex="1" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Digite sua senha" GridPane.rowIndex="7" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Digite sua senha novamente" GridPane.rowIndex="8" />

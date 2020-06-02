@@ -133,7 +133,7 @@ public class TelaAluguelController implements Initializable {
     private void abrirDetalheCampo(MouseEvent event) throws IOException {
         
                
-       d.setTexto("Campos de futebol da prefeitura disponiveis para você jogar uma pealda com a galera!"); 
+       d.setTexto("Campos de futebol da prefeitura disponiveis para você jogar uma pelada com a galera!"); 
        
        d.setCaminho_imag("/Imagens/unnamed.jpg");
        
@@ -185,27 +185,131 @@ public class TelaAluguelController implements Initializable {
     }
 
     @FXML
-    private void AluguelGateball(ActionEvent event) {
+    private void AluguelGateball(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+         
+         
+         
+         Parent confirma = FXMLLoader.load(
+                getClass().getResource(
+                        "/Telas/TelaAluguelConfirmacao.fxml"
+                )
+        );
+        
+       
+        modalidade = "ESPAÇO PARA GATEBALL";
+
+        Scene scene = new Scene(confirma);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
     }
 
     @FXML
-    private void AluguelPiscina(ActionEvent event) {
+    private void AluguelPiscina(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+         
+         
+         
+         Parent confirma = FXMLLoader.load(
+                getClass().getResource(
+                        "/Telas/TelaAluguelConfirmacao.fxml"
+                )
+        );
+        
+       
+        modalidade = "PISCINAS";
+
+        Scene scene = new Scene(confirma);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
     }
 
     @FXML
-    private void AlugarPet(ActionEvent event) {
+    private void AlugarPet(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+         
+         
+         
+         Parent confirma = FXMLLoader.load(
+                getClass().getResource(
+                        "/Telas/TelaAluguelConfirmacao.fxml"
+                )
+        );
+        
+       
+        modalidade = "ESPAÇO PET";
+
+        Scene scene = new Scene(confirma);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+        
     }
 
     @FXML
-    private void AlugarSociety(ActionEvent event) {
+    private void AlugarSociety(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+         
+         
+         
+         Parent confirma = FXMLLoader.load(
+                getClass().getResource(
+                        "/Telas/TelaAluguelConfirmacao.fxml"
+                )
+        );
+        
+       
+        modalidade = "CAMPO DE SOCIETY";
+
+        Scene scene = new Scene(confirma);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
     }
 
     @FXML
-    private void AlufarPista(ActionEvent event) {
+    private void AlugarPista(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+         
+         
+         
+         Parent confirma = FXMLLoader.load(
+                getClass().getResource(
+                        "/Telas/TelaAluguelConfirmacao.fxml"
+                )
+        );
+        
+       
+        modalidade = "PISTA DE SKATE";
+
+        Scene scene = new Scene(confirma);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
     }
 
     @FXML
-    private void AlugarQuadras(ActionEvent event) {
+    private void AlugarQuadras(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+         
+         
+         
+         Parent confirma = FXMLLoader.load(
+                getClass().getResource(
+                        "/Telas/TelaAluguelConfirmacao.fxml"
+                )
+        );
+        
+       
+        modalidade = "QUADRA POLIESPORTIVA";
+
+        Scene scene = new Scene(confirma);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+        
     }
     
 

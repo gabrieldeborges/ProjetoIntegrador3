@@ -5,18 +5,6 @@
         <group>
             <file>file:/C:/Users/LUANA/Documents/NetBeansProjects/ProjetoIntegradorAntigo/src/Gerenciamento/GerenciamentoOperacao.java</file>
             <file>file:/C:/Users/LUANA/Documents/NetBeansProjects/ProjetoIntegradorAntigo/src/projetointegrador3/ProjetoIntegrador3.java</file>
-            <file>file:/C:/Users/LUANA/Documents/NetBeansProjects/ProjetoIntegradorAntigo/src/Telas/TelaLoginController.java</file>
-            <file>file:/C:/Users/LUANA/Documents/NetBeansProjects/ProjetoIntegradorAntigo/src/Objetos/Operacao.java</file>
-            <file>file:/C:/Users/LUANA/Documents/NetBeansProjects/ProjetoIntegradorAntigo/src/Gerenciamento/Exec.java</file>
-            <file>file:/C:/Users/LUANA/Documents/NetBeansProjects/ProjetoIntegradorAntigo/src/Telas/TelaAluguelConfirmacaoController.java</file>
-            <file>file:/C:/Users/LUANA/Documents/NetBeansProjects/ProjetoIntegradorAntigo/src/Gerenciamento/Unidade.java</file>
-            <file>file:/C:/Users/LUANA/Documents/NetBeansProjects/ProjetoIntegradorAntigo/src/Telas/TelaHomeController.java</file>
-            <file>file:/C:/Users/LUANA/Documents/NetBeansProjects/ProjetoIntegradorAntigo/src/Gerenciamento/GerenciamentoUsuario.java</file>
-            <file>file:/C:/Users/LUANA/Documents/NetBeansProjects/ProjetoIntegradorAntigo/src/Telas/TelaAluguelController.java</file>
-        </group>
-        <group>
-            <file>file:/C:/Users/LUANA/Documents/NetBeansProjects/ProjetoIntegradorAntigo/src/Gerenciamento/GerenciamentoOperacao.java</file>
-            <file>file:/C:/Users/LUANA/Documents/NetBeansProjects/ProjetoIntegradorAntigo/src/projetointegrador3/ProjetoIntegrador3.java</file>
             <file>file:/C:/Users/LUANA/Documents/NetBeansProjects/ProjetoIntegradorAntigo/src/Objetos/Ativos.java</file>
             <file>file:/C:/Users/LUANA/Documents/NetBeansProjects/ProjetoIntegradorAntigo/src/Telas/TelaLoginController.java</file>
             <file>file:/C:/Users/LUANA/Documents/NetBeansProjects/ProjetoIntegradorAntigo/src/Telas/teste.css</file>
@@ -27,6 +15,13 @@
             <file>file:/C:/Users/LUANA/Documents/NetBeansProjects/ProjetoIntegradorAntigo/src/Telas/TelaHomeController.java</file>
             <file>file:/C:/Users/LUANA/Documents/NetBeansProjects/ProjetoIntegradorAntigo/src/Telas/TelaAluguelController.java</file>
             <file>file:/C:/Users/LUANA/Documents/NetBeansProjects/ProjetoIntegradorAntigo/src/Gerenciamento/GerenciamentoUsuario.java</file>
+        </group>
+        <group>
+            <file>file:/C:/Users/Lucas%20Filipe/Documents/SENAC/Sistemas%20da%20Informação/3°%20SEMESTRE/teste/src/Objetos/Usuario.java</file>
+            <file>file:/C:/Users/Lucas%20Filipe/Documents/SENAC/Sistemas%20da%20Informação/3°%20SEMESTRE/teste/src/Telas/TelaCadastroUsuarioController.java</file>
+            <file>file:/C:/Users/Lucas%20Filipe/Documents/SENAC/Sistemas%20da%20Informação/3°%20SEMESTRE/teste/src/Gerenciamento/GerenciamentoOperacao.java</file>
+            <file>file:/C:/Users/Lucas%20Filipe/Documents/SENAC/Sistemas%20da%20Informação/3°%20SEMESTRE/teste/src/Telas/util/Validacoes.java</file>
+            <file>file:/C:/Users/Lucas%20Filipe/Documents/SENAC/Sistemas%20da%20Informação/3°%20SEMESTRE/teste/src/Telas/TelaAluguelController.java</file>
         </group>
     </open-files>
 </project-private>
