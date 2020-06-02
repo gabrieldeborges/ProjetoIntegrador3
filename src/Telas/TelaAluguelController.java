@@ -197,7 +197,7 @@ public class TelaAluguelController implements Initializable {
                 )
         );
 
-        modalidade = "PISCINAS";
+        modalidade = "PISCINA";
 
         Scene scene = new Scene(confirma);
         stage.setScene(scene);
@@ -270,7 +270,7 @@ public class TelaAluguelController implements Initializable {
                 )
         );
 
-        modalidade = "QUADRA POLIESPORTIVA";
+        modalidade = "QUADRAS";
 
         Scene scene = new Scene(confirma);
         stage.setScene(scene);

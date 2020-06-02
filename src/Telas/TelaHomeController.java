@@ -40,18 +40,17 @@ public class TelaHomeController implements Initializable {
     public static int id = TelaLoginController.idPassa;
     
     
-    @FXML
-    private TableColumn<?, ?> TBAlugueis;
-    @FXML
-    private Button btSair;
-    @FXML
-    private Button btCancelar;
-    @FXML
     private Button btConfirmar;
     @FXML
     private TableView<?> tblAtivos;
     @FXML
     private Text lblBemVindo;
+    @FXML
+    private TableColumn<?, ?> colunaEspaço;
+    @FXML
+    private TableColumn<?, ?> tbunidade;
+    @FXML
+    private TableColumn<?, ?> colunaData;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -59,7 +58,7 @@ public class TelaHomeController implements Initializable {
         try {
            String bemV = lblBemVindo.getText();
             System.out.println(TelaLoginController.idPassa);
-           bemV += ", " + GerenciamentoUsuario.RetornaUser(TelaLoginController.idPassa);
+           bemV += ", " + GerenciamentoUsuario.RetornaUser(TelaLoginController.idPassa)+ "!";
            lblBemVindo.setText(bemV);
         
            
@@ -121,10 +120,11 @@ public class TelaHomeController implements Initializable {
         stage.setResizable(false);
         stage.show();
         stage.setTitle("Realizar novo aluguel");
+        Stage fecha = (Stage) btConfirmar.getScene().getWindow();
+        fecha.close();
         
     }
 
-    @FXML
     private void testeacrtion(ActionEvent event) {
         teste();
     }
