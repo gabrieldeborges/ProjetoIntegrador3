@@ -3,13 +3,6 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Lucas%20Filipe/Documents/SENAC/Sistemas%20da%20Informação/3°%20SEMESTRE/teste/src/Objetos/Usuario.java</file>
-            <file>file:/C:/Users/Lucas%20Filipe/Documents/SENAC/Sistemas%20da%20Informação/3°%20SEMESTRE/teste/src/Telas/TelaCadastroUsuarioController.java</file>
-            <file>file:/C:/Users/Lucas%20Filipe/Documents/SENAC/Sistemas%20da%20Informação/3°%20SEMESTRE/teste/src/Gerenciamento/GerenciamentoOperacao.java</file>
-            <file>file:/C:/Users/Lucas%20Filipe/Documents/SENAC/Sistemas%20da%20Informação/3°%20SEMESTRE/teste/src/Telas/util/Validacoes.java</file>
-            <file>file:/C:/Users/Lucas%20Filipe/Documents/SENAC/Sistemas%20da%20Informação/3°%20SEMESTRE/teste/src/Telas/TelaAluguelController.java</file>
-        </group>
-        <group>
             <file>file:/C:/Users/Lucas%20Filipe/Documents/SENAC/Sistemas%20da%20Informação/3°%20SEMESTRE/teste/src/projetointegrador3/ProjetoIntegrador3.java</file>
             <file>file:/C:/Users/Lucas%20Filipe/Documents/SENAC/Sistemas%20da%20Informação/3°%20SEMESTRE/teste/src/Objetos/Usuario.java</file>
             <file>file:/C:/Users/Lucas%20Filipe/Documents/SENAC/Sistemas%20da%20Informação/3°%20SEMESTRE/teste/src/Telas/TelaCadastroUsuarioController.java</file>
@@ -21,6 +14,19 @@
             <file>file:/C:/Users/Lucas%20Filipe/Documents/SENAC/Sistemas%20da%20Informação/3°%20SEMESTRE/teste/src/Telas/TelaLoginController.java</file>
             <file>file:/C:/Users/Lucas%20Filipe/Documents/SENAC/Sistemas%20da%20Informação/3°%20SEMESTRE/teste/src/Telas/util/Validacoes.java</file>
             <file>file:/C:/Users/Lucas%20Filipe/Documents/SENAC/Sistemas%20da%20Informação/3°%20SEMESTRE/teste/src/Telas/TelaAluguelController.java</file>
+        </group>
+        <group>
+            <file>file:/C:/Users/Lucas%20Filipe/Documents/SENAC/Sistemas%20da%20Informação/3°%20SEMESTRE/teste/src/Telas/TelaDetalhesController.java</file>
+            <file>file:/C:/Users/Lucas%20Filipe/Documents/SENAC/Sistemas%20da%20Informação/3°%20SEMESTRE/teste/src/Telas/util/Restricoes.java</file>
+            <file>file:/C:/Users/Lucas%20Filipe/Documents/SENAC/Sistemas%20da%20Informação/3°%20SEMESTRE/teste/src/Objetos/Usuario.java</file>
+            <file>file:/C:/Users/Lucas%20Filipe/Documents/SENAC/Sistemas%20da%20Informação/3°%20SEMESTRE/teste/src/Telas/TelaAluguelController.java</file>
+            <file>file:/C:/Users/Lucas%20Filipe/Documents/SENAC/Sistemas%20da%20Informação/3°%20SEMESTRE/teste/src/Gerenciamento/GerenciamentoOperacao.java</file>
+            <file>file:/C:/Users/Lucas%20Filipe/Documents/SENAC/Sistemas%20da%20Informação/3°%20SEMESTRE/teste/src/Gerenciamento/GerenciamentoUsuario.java</file>
+            <file>file:/C:/Users/Lucas%20Filipe/Documents/SENAC/Sistemas%20da%20Informação/3°%20SEMESTRE/teste/src/Telas/TelaLoginController.java</file>
+            <file>file:/C:/Users/Lucas%20Filipe/Documents/SENAC/Sistemas%20da%20Informação/3°%20SEMESTRE/teste/src/Telas/util/Validacoes.java</file>
+            <file>file:/C:/Users/Lucas%20Filipe/Documents/SENAC/Sistemas%20da%20Informação/3°%20SEMESTRE/teste/src/projetointegrador3/ProjetoIntegrador3.java</file>
+            <file>file:/C:/Users/Lucas%20Filipe/Documents/SENAC/Sistemas%20da%20Informação/3°%20SEMESTRE/teste/src/Telas/TelaAluguelConfirmacaoController.java</file>
+            <file>file:/C:/Users/Lucas%20Filipe/Documents/SENAC/Sistemas%20da%20Informação/3°%20SEMESTRE/teste/src/Telas/TelaCadastroUsuarioController.java</file>
         </group>
     </open-files>
 </project-private>
