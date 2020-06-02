@@ -366,9 +366,5 @@ public class GerenciamentoOperacao {
 
         //Retorna a lista de clientes do banco de dados
         return listaUnidade;
-    }
-
-          
-      
-        
+    }     
 }

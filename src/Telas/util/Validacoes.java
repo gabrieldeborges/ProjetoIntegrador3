@@ -80,4 +80,10 @@ public class Validacoes {
             return (false);
         }
     }
+    
+    public static void validarDisponibilidade(){
+    
+        
+    }
+    
 }

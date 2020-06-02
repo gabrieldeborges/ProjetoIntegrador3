@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="847.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Telas.TelaAluguelController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="846.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Telas.TelaAluguelController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8bdfce" height="60.0" layoutX="-8.0" stroke="BLACK" strokeType="INSIDE" width="855.0" />
       <Text layoutX="29.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minhas solicitações">
@@ -70,7 +70,7 @@
             <Font size="14.0" />
          </font>
       </Text>
-      <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="630.0" layoutY="134.0" onDragDetected="#DetalhePet">
+      <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="630.0" layoutY="134.0">
          <image>
             <Image url="@../Imagens/icons8-ajuda-30.png" />
          </image>
@@ -81,18 +81,18 @@
             <Font size="14.0" />
          </font>
       </Text>
-      <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="793.0" layoutY="134.0" onDragDetected="#DetalheSociety">
+      <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="793.0" layoutY="134.0">
          <image>
             <Image url="@../Imagens/icons8-ajuda-30.png" />
          </image>
       </ImageView>
-      <Button fx:id="btPistaSkt" layoutX="264.0" layoutY="294.0" mnemonicParsing="false" onAction="#AlufarPista" prefHeight="139.0" prefWidth="144.0" style="-fx-background-color: #BDEBE2; -fx-background-radius: 20;" />
+      <Button fx:id="btPistaSkt" layoutX="264.0" layoutY="294.0" mnemonicParsing="false" onAction="#AlugarPista" prefHeight="139.0" prefWidth="144.0" style="-fx-background-color: #BDEBE2; -fx-background-radius: 20;" />
       <Text layoutX="290.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pistas de Skate">
          <font>
             <Font size="14.0" />
          </font>
       </Text>
-      <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="376.0" layoutY="305.0" onDragDetected="#DetalheSkate">
+      <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="376.0" layoutY="305.0">
          <image>
             <Image url="@../Imagens/icons8-ajuda-30.png" />
          </image>
@@ -103,7 +103,7 @@
             <Font size="13.0" />
          </font>
       </Text>
-      <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="554.0" layoutY="305.0" onDragDetected="#DetalheQuadra">
+      <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="554.0" layoutY="305.0">
          <image>
             <Image url="@../Imagens/icons8-ajuda-30.png" />
          </image>
@@ -153,10 +153,11 @@
             <Font name="Gautami" size="21.0" />
          </font>
       </Text>
-      <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="124.0" layoutY="134.0" onDragDetected="#DetalheCampo" onMouseClicked="#abrirDetalheCampo">
+      <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="124.0" layoutY="134.0" onMouseClicked="#abrirDetalheCampo">
          <image>
             <Image url="@../Imagens/icons8-ajuda-30.png" />
          </image>
       </ImageView>
+      <Button fx:id="btHome" layoutX="11.0" layoutY="77.0" mnemonicParsing="false" onAction="#voltarHome" prefHeight="28.0" prefWidth="55.0" style="-fx-background-color: #BDEBE2; -fx-background-radius: 20;" text="Voltar" />
    </children>
 </AnchorPane>
