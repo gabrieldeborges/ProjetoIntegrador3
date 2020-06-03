@@ -10,12 +10,12 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="396.0" prefWidth="532.0" style="-fx-background-color: #58AF9C;" stylesheets="@teste.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Telas.TelaFeedbackController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="410.0" layoutX="78.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="375.0" />
-      <Text fx:id="lblVindo" layoutX="92.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem vindo de volta">
+      <Text fx:id="lblVindo" layoutX="155.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem vindo de volta!">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Text>
-      <Text fx:id="lblTipoLocal" layoutX="109.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Como foi o seu último o Aluguel da">
+      <Text fx:id="lblTipoLocal" layoutX="117.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Como foi o seu último conosco?">
          <font>
             <Font size="20.0" />
          </font>
@@ -30,7 +30,7 @@
       <Button fx:id="bt3" layoutX="226.0" layoutY="238.0" mnemonicParsing="false" onAction="#guardaCor3" onMouseEntered="#trocaCor3" prefHeight="58.0" prefWidth="57.0" style="-fx-shape: &quot;M 100 0 L175 200 L0 75 L200 75 L25 200 Z&quot;;" textFill="WHITE" />
       <Button fx:id="bt4" layoutX="293.0" layoutY="238.0" mnemonicParsing="false" onAction="#guardaCor4" onMouseEntered="#trocaCor4" prefHeight="58.0" prefWidth="57.0" style="-fx-shape: &quot;M 100 0 L175 200 L0 75 L200 75 L25 200 Z&quot;;" textFill="WHITE" />
       <Button fx:id="bt5" layoutX="369.0" layoutY="238.0" mnemonicParsing="false" onAction="#guardaCor5" onMouseEntered="#trocaCor5" prefHeight="58.0" prefWidth="57.0" style="-fx-shape: &quot;M 100 0 L175 200 L0 75 L200 75 L25 200 Z&quot;;" styleClass="bt5" textFill="WHITE" />
-      <Text fx:id="retornaDia" layoutX="154.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No dia: ">
+      <Text fx:id="retornaDia" layoutX="156.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No dia: ">
          <font>
             <Font size="18.0" />
          </font>
@@ -40,11 +40,10 @@
             <Font size="13.0" />
          </font>
       </Button>
-      <Label fx:id="trazModalidade" layoutX="197.0" layoutY="92.0" text="trazModalidade">
+      <Label fx:id="trazModalidade" layoutX="197.0" layoutY="98.0" text="trazModalidade">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Button fx:id="btTeste" layoutX="324.0" layoutY="143.0" mnemonicParsing="false" text="Button" />
    </children>
 </AnchorPane>

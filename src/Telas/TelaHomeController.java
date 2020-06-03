@@ -58,7 +58,7 @@ public class TelaHomeController implements Initializable {
         try {
            String bemV = lblBemVindo.getText();
             System.out.println(TelaLoginController.idPassa);
-           bemV += ", " + GerenciamentoUsuario.RetornaUser(TelaLoginController.idPassa)+ "!";
+           bemV += " " + GerenciamentoUsuario.RetornaUser(TelaLoginController.idPassa)+ "!";
            lblBemVindo.setText(bemV);
         
            

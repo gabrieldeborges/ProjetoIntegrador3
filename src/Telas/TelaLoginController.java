@@ -100,19 +100,13 @@ public class TelaLoginController implements Initializable {
                 
             
             int equip = verificaFeedback(entrar);
-            System.out.println("entrou na dasda" +equip);
-            
-            
+
             if(equip != -1){
-            
-            
-  
                 idEquip = equip;
 		idPassa = entrar;
                // Exec.idUser = entrar;
 		//TelaHomeController.setId(entrar);
-                //System.out.println("to mandando"+entrar);
-		      
+                     
                 
                 FXMLLoader loader2 = new FXMLLoader();
 		loader2.setLocation(getClass().getResource("/Telas/TelaFeedback.fxml"));
@@ -134,14 +128,9 @@ public class TelaLoginController implements Initializable {
         
         
                 }else{ 
-                
-                
-                //caso o ususario não tenha local para avaliar
-            
-  
-               
+        
 		idPassa = entrar;
-                Exec.idUser = entrar;
+               // Exec.idUser = entrar;
 		//TelaHomeController.setId(entrar);
                 //System.out.println("to mandando"+entrar);
 		          System.out.println("Tela 1 " + idPassa);

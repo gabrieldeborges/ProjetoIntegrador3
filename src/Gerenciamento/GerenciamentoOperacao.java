@@ -3,6 +3,7 @@ package Gerenciamento;
 import Objetos.FeedBack;
 import Objetos.Operacao;
 import Objetos.Usuario;
+import Objetos.telaFeed;
 import api.root;
 import com.google.gson.Gson;
 import java.io.BufferedReader;
@@ -137,7 +138,7 @@ public class GerenciamentoOperacao {
                 
            
             
-         String sql = "INSERT INTO Alugueis (ID_EQUIPAMENTO, ID_USUARIO, DIA, situacao)"
+         String sql = "INSERT INTO Alugueis (ID_EQUIPAMENTO, ID_USUARIO, DATA, situacao)"
                 + " VALUES (?, ?, ?, ?)";
 
         //Conexão para abertura e fechamento
@@ -157,9 +158,9 @@ public class GerenciamentoOperacao {
         String data = (op.data).format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
         preparedStatement.setString(3, data);
         preparedStatement.setString(4, "0");
+        
    
-        //Executa   preparedStatement.setString(18,usuario.propCidade);o comando no banco de dados
-        preparedStatement.execute();
+      preparedStatement.execute();
                 System.out.println("ALUGADO");
         
         //Fecha o statement
@@ -201,6 +202,11 @@ public class GerenciamentoOperacao {
         //Fecha o statement
         preparedStatement.close();
 
+        PreparedStatement p = null;
+        
+        p = connection.prepareStatement("INSERT INTO alugueis(alugueis)  ");
+        
+        
         //Fecha a conexão
         connection.close();
     
@@ -219,7 +225,7 @@ public class GerenciamentoOperacao {
        
             try {
 
-         String sql = "SELECT ID_EQUIPAMENTO, DIA FROM ALUGUEIS WHERE ID_USUARIO = ?";
+         String sql = "SELECT * FROM ALUGUEIS WHERE ID_USUARIO = ?";
 
         //Conexão para abertura e fechamento
         Connection connection = null;
@@ -238,7 +244,12 @@ public class GerenciamentoOperacao {
          result = preparedStatement.executeQuery();
         
          while (result.next()) {
-          
+             
+             if(result.getString("SITUACAO") != "0"){
+                 break;
+                 
+             }
+             
              idEquipRetorna = result.getInt("id_equipamento");
              
          }
@@ -262,14 +273,16 @@ public class GerenciamentoOperacao {
         
         
         
-          public static String trazModalidade (int id) throws Exception{
+          public static telaFeed trazModalidade (int id) throws Exception{
         
               //METODO PARA VERIFICAR SE USUARIO TEM ALUGUEIS PARA AVALIAR
-        String retornoModalidade = "";
+     
+        telaFeed fed = new telaFeed();
+        fed.setModalidade("");
         //String retornoDia = "";
             try {
 
-         String sql = "SELECT *, FROM LISTAS_EQUIPAMENTOS WHERE ID = ?";
+         String sql = "SELECT * FROM LISTAS_EQUIPAMENTOS WHERE ID = ?";
 
         //Conexão para abertura e fechamento
         Connection connection = null;
@@ -287,21 +300,31 @@ public class GerenciamentoOperacao {
          result = preparedStatement.executeQuery();
         
          while (result.next()) {
-             retornoModalidade = result.getString("EQUIPAMENTOS");
-             
+             fed.setModalidade (result.getString("EQUIPAMENTOS"));
+           
          }
          
+           PreparedStatement p = null;
+            p = connection.prepareStatement("SELECT DATA FROM ALUGUEIS WHERE ID_EQUIPAMENTO = ?");
+            p.setInt(1, id);
+            ResultSet r = null;
+            r = p.executeQuery();
+            
+            r.next();
+            fed.setData(r.getString("DATA"));
+            
+            p.close();
            preparedStatement.close();
            
         connection.close();
       
-        return retornoModalidade;
+        return fed;
         
             } catch (Exception e) {
                 System.out.println();
                System.out.println("Exception in NetClientGet:- " + e);
                
-               return retornoModalidade;
+               return fed;
             }
           }
           

@@ -2,6 +2,7 @@ package Telas;
 
 import static Gerenciamento.GerenciamentoOperacao.mandaAvaliacao;
 import static Gerenciamento.GerenciamentoOperacao.trazModalidade;
+import Objetos.telaFeed;
 import static Telas.TelaLoginController.idPassa;
 import Telas.util.Alertas;
 import com.sun.javafx.css.Style;
@@ -79,24 +80,25 @@ public class TelaFeedbackController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
        
         try {
-            trazModalidade.setText(trazModalidade(TelaLoginController.idEquip));
+            telaFeed mostra = trazModalidade(TelaLoginController.idEquip);
+            String modal = trazModalidade.getText()+" "+mostra.getModalidade();
+            trazModalidade.setText(mostra.getModalidade());
+            String dia = retornaDia.getText()+" "+mostra.getData();
+            retornaDia.setText(dia);
             
             
         } catch (Exception ex) {
             Logger.getLogger(TelaFeedbackController.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
-        
+                
     }
 
      @FXML
     private void entrar(ActionEvent event) throws IOException, Exception {
         
-         mandaAvaliacao(TelaLoginController.idEquip, avalia);
+                mandaAvaliacao(TelaLoginController.idEquip, avalia);
          
-             
-                 FXMLLoader loader = new FXMLLoader();
+                FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass().getResource("/Telas/TelaHome.fxml"));
 		Parent root = loader.load();
                 
@@ -120,15 +122,8 @@ public class TelaFeedbackController implements Initializable {
     @FXML
     private void guardaCor1(ActionEvent event) {
     
-        
         avalia = 1;
-       // bt1.getStyle();
-        
-        //System.out.println(bt1.getStyle());
-        
-        bt1.setStyle(bt1.getStyle() + "-fx-background-color: gold;");
-        
-        
+        insereCor(1);
     }
 
     @FXML
@@ -139,6 +134,7 @@ public class TelaFeedbackController implements Initializable {
     private void guardaCor2(ActionEvent event) {
         avalia = 2;
         
+        insereCor(2);
     }
 
     @FXML
@@ -149,6 +145,8 @@ public class TelaFeedbackController implements Initializable {
     @FXML
     private void guardaCor3(ActionEvent event) {
         avalia = 3;
+        
+        insereCor(3);
     }
 
     @FXML
@@ -157,6 +155,8 @@ public class TelaFeedbackController implements Initializable {
 
     @FXML
     private void guardaCor4(ActionEvent event) {
+        
+        insereCor(4);
         avalia = 4;
     }
 
@@ -166,6 +166,8 @@ public class TelaFeedbackController implements Initializable {
 
     @FXML
     private void guardaCor5(ActionEvent event) {
+        
+        insereCor(5);
         avalia = 5;
     }
 
@@ -173,6 +175,65 @@ public class TelaFeedbackController implements Initializable {
     private void testeMuda(MouseEvent event) {
     }
     
-    
+    public void insereCor(int num){
+        
+        if(num ==1){
+        bt1.setStyle(bt1.getStyle() + "-fx-background-color: gold;");
+        //botões desabilitados
+     
+         bt2.setStyle(bt2.getStyle() + "-fx-background-color: #dadada;");
+         bt3.setStyle(bt2.getStyle() + "-fx-background-color: #dadada;");
+         bt4.setStyle(bt2.getStyle() + "-fx-background-color: #dadada;");
+         bt5.setStyle(bt2.getStyle() + "-fx-background-color: #dadada;");
+        
+        
+        
+        }
+        else if(num==2){
+            
+             bt1.setStyle(bt1.getStyle() + "-fx-background-color: gold;");
+             bt2.setStyle(bt1.getStyle() + "-fx-background-color: gold;");
+            //botões desabilitados
+       
+         bt3.setStyle(bt3.getStyle() + "-fx-background-color: #dadada;");
+         bt4.setStyle(bt3.getStyle() + "-fx-background-color: #dadada;");
+         bt5.setStyle(bt3.getStyle() + "-fx-background-color: #dadada;");
+        
+        }
+        else if(num==3){
+            
+             bt1.setStyle(bt1.getStyle() + "-fx-background-color: gold;");
+             bt2.setStyle(bt1.getStyle() + "-fx-background-color: gold;");
+             bt3.setStyle(bt1.getStyle() + "-fx-background-color: gold;");
+             
+            //botões desabilitados
+       
+       
+         bt4.setStyle(bt4.getStyle() + "-fx-background-color: #dadada;");
+         bt5.setStyle(bt4.getStyle() + "-fx-background-color: #dadada;");
+         
+        }
+        else if(num==4){
+              bt1.setStyle(bt1.getStyle() + "-fx-background-color: gold;");
+             bt2.setStyle(bt1.getStyle() + "-fx-background-color: gold;");
+             bt3.setStyle(bt1.getStyle() + "-fx-background-color: gold;");
+             bt4.setStyle(bt1.getStyle() + "-fx-background-color: gold;");
+            //botões desabilitados
+      
+         bt5.setStyle(bt5.getStyle() + "-fx-background-color: #dadada;");
+            
+        }
+        else{
+            
+             bt1.setStyle(bt1.getStyle() + "-fx-background-color: gold;");
+             bt2.setStyle(bt1.getStyle() + "-fx-background-color: gold;");
+             bt3.setStyle(bt1.getStyle() + "-fx-background-color: gold;");
+             bt4.setStyle(bt1.getStyle() + "-fx-background-color: gold;");
+             bt5.setStyle(bt1.getStyle() + "-fx-background-color: gold;");
+             
+        }
+        
+        
+    }
     
 }
