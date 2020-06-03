@@ -25,7 +25,7 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <Button fx:id="bt1" layoutX="92.0" layoutY="238.0" mnemonicParsing="false" onAction="#guardaCor1" onMouseEntered="#trocaCor1" prefHeight="58.0" prefWidth="57.0" style="-fx-shape: &quot;M 100 0 L175 200 L0 75 L200 75 L25 200 Z&quot;;" textFill="WHITE" />
+      <Button fx:id="bt1" layoutX="92.0" layoutY="238.0" mnemonicParsing="false" onAction="#guardaCor1" onMouseDragged="#testeMuda" onMouseEntered="#trocaCor1" prefHeight="58.0" prefWidth="57.0" style="-fx-shape: &quot;M 100 0 L175 200 L0 75 L200 75 L25 200 Z&quot;;" textFill="WHITE" />
       <Button fx:id="bt2" layoutX="158.0" layoutY="238.0" mnemonicParsing="false" onAction="#guardaCor2" onMouseEntered="#trocaCor2" prefHeight="58.0" prefWidth="57.0" style="-fx-shape: &quot;M 100 0 L175 200 L0 75 L200 75 L25 200 Z&quot;;" textFill="WHITE" />
       <Button fx:id="bt3" layoutX="226.0" layoutY="238.0" mnemonicParsing="false" onAction="#guardaCor3" onMouseEntered="#trocaCor3" prefHeight="58.0" prefWidth="57.0" style="-fx-shape: &quot;M 100 0 L175 200 L0 75 L200 75 L25 200 Z&quot;;" textFill="WHITE" />
       <Button fx:id="bt4" layoutX="293.0" layoutY="238.0" mnemonicParsing="false" onAction="#guardaCor4" onMouseEntered="#trocaCor4" prefHeight="58.0" prefWidth="57.0" style="-fx-shape: &quot;M 100 0 L175 200 L0 75 L200 75 L25 200 Z&quot;;" textFill="WHITE" />
@@ -45,5 +45,6 @@
             <Font size="20.0" />
          </font>
       </Label>
+      <Button fx:id="btTeste" layoutX="324.0" layoutY="143.0" mnemonicParsing="false" text="Button" />
    </children>
 </AnchorPane>

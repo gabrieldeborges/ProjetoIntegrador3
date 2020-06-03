@@ -56,6 +56,8 @@ public class TelaFeedbackController implements Initializable {
     private Text retornaDia;
     @FXML
     private Label trazModalidade;
+    @FXML
+    private Button btTeste;
     
     public void salvarFeedbackRuim() {
         Alertas.mostrarAlertas("Feedback salvo", "Pedimos desculpa, estamos buscando melhorar nossos serviços!",
@@ -110,11 +112,23 @@ public class TelaFeedbackController implements Initializable {
     @FXML
     private void trocaCor1(MouseEvent event) {
         
+        
+        
     }
 
+  
     @FXML
     private void guardaCor1(ActionEvent event) {
-       avalia = 1;
+    
+        
+        avalia = 1;
+       // bt1.getStyle();
+        
+        //System.out.println(bt1.getStyle());
+        
+        bt1.setStyle(bt1.getStyle() + "-fx-background-color: gold;");
+        
+        
     }
 
     @FXML
@@ -154,4 +168,11 @@ public class TelaFeedbackController implements Initializable {
     private void guardaCor5(ActionEvent event) {
         avalia = 5;
     }
+
+    @FXML
+    private void testeMuda(MouseEvent event) {
+    }
+    
+    
+    
 }
