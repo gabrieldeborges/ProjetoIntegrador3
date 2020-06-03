@@ -4,9 +4,11 @@
       
 }
 #bt1:hover {
+    
     -fx-background-color: gold;
 }
 #bt2:hover{
+    
     
     -fx-background-color: gold;
     
@@ -14,10 +16,12 @@
 }
 #bt3:hover{
     
+    
     -fx-background-color: gold;
     
 
 }
+
 #bt4:hover{
     
     -fx-background-color: gold;

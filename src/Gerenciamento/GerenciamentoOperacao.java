@@ -137,7 +137,7 @@ public class GerenciamentoOperacao {
                 
            
             
-         String sql = "INSERT INTO Alugueis (ID_EQUIPAMENTO, ID_USUARIO, DIA, AVALIACAO)"
+         String sql = "INSERT INTO Alugueis (ID_EQUIPAMENTO, ID_USUARIO, DIA, situacao)"
                 + " VALUES (?, ?, ?, ?)";
 
         //Conexão para abertura e fechamento
@@ -156,7 +156,7 @@ public class GerenciamentoOperacao {
         preparedStatement.setInt(2, op.iduser);
         String data = (op.data).format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
         preparedStatement.setString(3, data);
-        preparedStatement.setString(3, "0");
+        preparedStatement.setString(4, "0");
    
         //Executa   preparedStatement.setString(18,usuario.propCidade);o comando no banco de dados
         preparedStatement.execute();

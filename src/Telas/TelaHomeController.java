@@ -120,8 +120,7 @@ public class TelaHomeController implements Initializable {
         stage.setResizable(false);
         stage.show();
         stage.setTitle("Realizar novo aluguel");
-        Stage fecha = (Stage) btConfirmar.getScene().getWindow();
-        fecha.close();
+  
         
     }
 

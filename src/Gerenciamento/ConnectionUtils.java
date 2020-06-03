@@ -18,7 +18,7 @@ public static Connection getConnection() throws Exception {
         
         //Só tenta abrir uma conexão se não existir ou estiver fechada            
         //Endereço de conexão com o banco de dados
-        String dbURL = "jdbc:mysql://localhost:3306/PI";
+        String dbURL = "jdbc:mysql://localhost:3306/pi3";
         
         //Propriedades para armazenamento de usuário e senha
         Properties properties = new Properties();
