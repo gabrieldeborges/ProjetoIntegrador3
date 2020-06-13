@@ -12,14 +12,14 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="847.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Telas.TelaHomeController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8bdfce" height="60.0" layoutX="-8.0" stroke="BLACK" strokeType="INSIDE" width="855.0" />
-      <Text layoutX="29.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minhas solicitações">
+      <Text fill="#0004ff" layoutX="29.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minhas solicitações">
          <font>
-            <Font size="16.0" />
+            <Font name="System Bold Italic" size="18.0" />
          </font>
       </Text>
-      <Text layoutX="189.0" layoutY="36.0" onMouseClicked="#novoAluguel" strokeType="OUTSIDE" strokeWidth="0.0" text="Realizar novo aluguel">
+      <Text fill="#0004ff" layoutX="222.0" layoutY="35.0" onMouseClicked="#novoAluguel" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Realizar novo aluguel">
          <font>
-            <Font size="16.0" />
+            <Font name="System Bold Italic" size="18.0" />
          </font>
       </Text>
       <Text fx:id="lblBemVindo" layoutX="616.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem vindo,">
