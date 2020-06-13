@@ -122,33 +122,33 @@ public class TelaCadastroUsuarioController implements Initializable {
     public void confirmarCadastro() throws Exception {
         Usuario usuario = new Usuario();
 
-        boolean teste;
-         {
+        boolean teste=true;
+         if (teste == true) {
             usuario.propNome = txtNome.getText();
             usuario.propSobrenome = txtSobrenome.getText();
             usuario.propEmail = txtEmail.getText();
-           // usuario.propCidade = txtCidade.getText();
-            //usuario.propPais = txtPais.getText();
+           usuario.propCidade = txtCidade.getText();
+            usuario.propPais = txtPais.getText();
             usuario.propCpf = txtCpf.getText();
-           // Validacoes.validarCPF(usuario.propCpf);
-            //usuario.propNomeMae = txtNomeMae.getText();
+           Validacoes.validarCPF(usuario.propCpf);
+            usuario.propNomeMae = txtNomeMae.getText();
             usuario.propCep = txtCep.getText();
-           // usuario.propEndereco = txtEndereco.getText();
-            //usuario.propNumero = txtNumero.getText();
-            //usuario.propComplemento = txtComplemento.getText();
-            //usuario.propBairro = txtBairro.getText();
-            //usuario.propCidadeRes = txtCidadeRes.getText();
-            //usuario.propUf = txtUf.getText();
+           usuario.propEndereco = txtEndereco.getText();
+            usuario.propNumero = txtNumero.getText();
+            usuario.propComplemento = txtComplemento.getText();
+            usuario.propBairro = txtBairro.getText();
+            usuario.propCidadeRes = txtCidadeRes.getText();
+            usuario.propUf = txtUf.getText();
             usuario.propSenha = senha.getText();
             usuario.dtNascimento = dpDataNascimento.getValue();
-            //usuario.propConfirmarSenha = confirmarSenha.getText();
+            usuario.propConfirmarSenha = confirmarSenha.getText();
             usuario.dtNascimento = dpDataNascimento.getValue();
             usuario.unidadePref = (String) cbUnidadePref.getValue();
             usuario.esportePref = (String) cbEsportePref.getValue();
             usuario.Sexo = cbSexo.getValue();
-            //teste = Validacoes.validarCampoVazio(usuario.propNome, usuario.propEmail, usuario.propSenha);
+            teste = Validacoes.validarCampoVazio(usuario.propNome, usuario.propEmail, usuario.propSenha);
 
-        //} while (teste == true);
+        };
         gerUsuario.inserir(usuario);
 
         Stage stage = new Stage();
@@ -168,7 +168,7 @@ public class TelaCadastroUsuarioController implements Initializable {
         fecha.close();
         
          }
-    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 

@@ -13,19 +13,19 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="734.0" style="-fx-background-color: #96d6c8;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Telas.TelaCadastroUsuarioController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="734.0" style="-fx-background-color: #95e6d6;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Telas.TelaCadastroUsuarioController">
    <children>
-      <Label layoutX="186.0" layoutY="14.0" text="Formulário de cadastro de usuários" textFill="WHITE">
+      <Label layoutX="186.0" layoutY="14.0" text="Formulário de cadastro de usuários">
          <font>
             <Font name="System Bold" size="22.0" />
          </font>
       </Label>
-      <Button fx:id="btEntrar" layoutX="310.0" layoutY="490.0" mnemonicParsing="false" onAction="#confirmarCadastro" prefHeight="20.0" prefWidth="116.0" style="-fx-background-color: #6dcfb9; -fx-background-radius: 15;" text="Confirmar">
+      <Button fx:id="btEntrar" layoutX="310.0" layoutY="490.0" mnemonicParsing="false" onAction="#confirmarCadastro" prefHeight="20.0" prefWidth="116.0" style="-fx-background-color: #2cc9aa; -fx-background-radius: 15;" text="Confirmar">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <GridPane fx:id="GPInformacoes" layoutX="9.0" layoutY="55.0" prefHeight="422.0" prefWidth="331.0">
+      <GridPane fx:id="GPInformacoes" layoutX="38.0" layoutY="68.0" prefHeight="422.0" prefWidth="300.0">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -45,18 +45,11 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <Label fx:id="LBLCPF" text="Sobrenome*" GridPane.rowIndex="1">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Label>
-            <Label fx:id="LBLRG" text="E-mail*" GridPane.rowIndex="2">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font></Label>
+            <Label fx:id="LBLCPF" style="-fx-font-weight: BOLD; -fx-font-style: ITALIC;" text="Sobrenome*" GridPane.rowIndex="1" />
+            <Label fx:id="LBLRG" style="-fx-font-weight: BOLD ITALIC;" text="E-mail*" GridPane.rowIndex="2" />
             <Label fx:id="LBLEndereco" text="Cidade" GridPane.rowIndex="3" />
             <Label fx:id="LBLTelefone" GridPane.rowIndex="4" />
-            <Label fx:id="LBLEmail" text="CPF" GridPane.rowIndex="5" />
+            <Label fx:id="LBLEmail" style="-fx-font-weight: BOLD;" text="CPF *" GridPane.rowIndex="5" />
             <Label fx:id="LBLEstadoCivil" text="Nome da mãe" GridPane.rowIndex="6" />
             <Label fx:id="LBLNatal" text="Data de Nascimento" GridPane.rowIndex="7" />
             <Label fx:id="LBLGenero" text="Unidade Preferida" GridPane.rowIndex="9" />
@@ -71,7 +64,7 @@
             <ChoiceBox fx:id="cbUnidadePref" prefHeight="25.0" prefWidth="172.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
             <Label fx:id="LBLCPF2" prefHeight="20.0" prefWidth="94.0" text="Nome*" textFill="#0a0a0a">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font name="System Bold Italic" size="12.0" />
                </font>
             </Label>
             <Label text="Esporte Favorito" GridPane.rowIndex="8" />
@@ -81,7 +74,7 @@
             <ChoiceBox fx:id="cbSexo" prefHeight="25.0" prefWidth="172.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
          </children>
       </GridPane>
-      <GridPane fx:id="GPInformacoes1" layoutX="368.0" layoutY="46.0" prefHeight="422.0" prefWidth="331.0">
+      <GridPane fx:id="GPInformacoes1" layoutX="367.0" layoutY="68.0" prefHeight="422.0" prefWidth="331.0">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -129,8 +122,14 @@
                </font>
             </Label>
             <TextField fx:id="txtCep" GridPane.columnIndex="1" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Digite sua senha" GridPane.rowIndex="7" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Digite sua senha novamente" GridPane.rowIndex="8" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Digite sua senha *" GridPane.rowIndex="7">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Digite sua senha novamente*" GridPane.rowIndex="8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Text>
             <PasswordField fx:id="senha" GridPane.columnIndex="1" GridPane.rowIndex="7" />
             <PasswordField fx:id="confirmarSenha" GridPane.columnIndex="1" GridPane.rowIndex="8" />
          </children>
