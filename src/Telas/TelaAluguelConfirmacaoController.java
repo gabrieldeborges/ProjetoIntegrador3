@@ -16,6 +16,8 @@ import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.concurrent.Service;
+import javafx.concurrent.Task;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -31,7 +33,10 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  * FXML Controller class
@@ -122,24 +127,74 @@ public class TelaAluguelConfirmacaoController implements Initializable {
 
         //Obtém os resultados de pesquisa do mock
         
-        if (txtCEPMANDA.getText()!=null && TelaAluguelController.modalidade != null){
+        if (txtCEPMANDA.getText()!=null ){
         
-            List resultados = GerenciamentoOperacao.listar(txtCEPMANDA.getText(), TelaAluguelController.modalidade);
+            List resultados = null;
 
-        //Se há resultados, atualiza a tabela
-        if (resultados != null) {
-            tblUnidades.setItems(
-                    FXCollections.observableArrayList(resultados)
+        // Carrega o FXML
+        FXMLLoader splashLoader = new FXMLLoader(getClass().getResource("/Telas/SplashCarregar.fxml"));
+        StackPane splashPane = splashLoader.load();
+
+        // Cria a Janela do Splash
+        // Define como transparente para que não apareça decoração de janela (maximizar, minimizar)
+        Stage splashStage = new Stage(StageStyle.TRANSPARENT);
+        final Scene scene = new Scene(splashPane);
+        scene.setFill(Color.TRANSPARENT); // Define que a cor do painel root seja transparente para que dê o efeito de sombra
+        splashStage.setScene(scene);
+
+        // Cria o serviço para rodar alguma tarefa em background enquanto o splash é mostrado (no caso somente um delay de 10s)
+        Service<Boolean> splashService = new Service<Boolean>() {
+
+            // Mostra o splash quando o serviço for iniciado
+            @Override
+            public void start() {
+                super.start();
+                splashStage.show(); // mostra a janela
+            }
+
+            // Simulação de uma tarefa pesada 
+            @Override
+            protected Task<Boolean> createTask() {
+                return new Task<Boolean>() {
+                    @Override
+                    protected Boolean call() throws Exception {
+                        List resultados = GerenciamentoOperacao.listar(txtCEPMANDA.getText(), "PISCINA");
+                         //Se há resultados, atualiza a tabela
+                         if (resultados != null) {
+                         tblUnidades.setItems(
+                        FXCollections.observableArrayList(resultados)
+                    
+                    
             );
-        }
-        
         }else{
              Alertas.mostrarAlertas("Erro", "CEP não preenchido",
                  "Favor preencher o campo e realizar a busca novamente", Alert.AlertType.ERROR);
+        
+        
         }
+                 
+                        return true;
+                    }
+                };
+            }
+
+            // Quando a tarefa for finalizada fecha o splash e mostra a tela principal
+            @Override
+            protected void succeeded() {
+                splashStage.close();  // Fecha o splash
+                try {
+                    // Chama a tela principal
+                } catch (Exception ex) {
+                }
+            }
+        };
+
+        splashService.start();
+
+       
         
     }
-
+    }
     @FXML
     private void realizaAluguel(ActionEvent event) throws Exception {
              Operacao operacao = new Operacao();

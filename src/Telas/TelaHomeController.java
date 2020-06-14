@@ -5,13 +5,19 @@
  */
 package Telas;
 
+import Gerenciamento.GerenciamentoOperacao;
 import Gerenciamento.GerenciamentoUsuario;
+import Objetos.Ativos;
 import Telas.util.Alertas;
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -21,12 +27,16 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import static javafx.scene.input.KeyCode.S;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 import projetointegrador3.ProjetoIntegrador3;
 
 
@@ -42,15 +52,17 @@ public class TelaHomeController implements Initializable {
     
     private Button btConfirmar;
     @FXML
-    private TableView<?> tblAtivos;
+    private TableView<Ativos> tblAtivos;
     @FXML
     private Text lblBemVindo;
     @FXML
-    private TableColumn<?, ?> colunaEspaço;
+    private TableColumn<Ativos, String> colunaEspaço;
     @FXML
-    private TableColumn<?, ?> tbunidade;
+    private TableColumn<Ativos, String> tbunidade;
     @FXML
-    private TableColumn<?, ?> colunaData;
+    private TableColumn<Ativos, String> colunaData;
+    
+  
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -61,20 +73,41 @@ public class TelaHomeController implements Initializable {
            bemV += " " + GerenciamentoUsuario.RetornaUser(TelaLoginController.idPassa)+ "!";
            lblBemVindo.setText(bemV);
         
+           //try colacando botão dentro de table
            
+            colunaEspaço.setCellValueFactory(
+                new PropertyValueFactory("Espaco")
+        );
+        tbunidade.setCellValueFactory(
+                new PropertyValueFactory("unidade")
+        );
+        
+        colunaData.setCellValueFactory(
+                new PropertyValueFactory("DataAluguel")
+        );
+     
+         
            
-           
-           
+        
+            List resultados = GerenciamentoOperacao.listarPorUser(TelaLoginController.idPassa);
+
+        //Se há resultados, atualiza a tabela
+        if (resultados != null) {
+            tblAtivos.setItems(
+                    FXCollections.observableArrayList(resultados)
+            );
+        }
+
+     
         } catch (Exception ex) {
             Logger.getLogger(TelaHomeController.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        
-        
-        
-        
-       teste();
+        teste();
     }    
+    
+    
+    
     
     
     public static void setId(int ide){

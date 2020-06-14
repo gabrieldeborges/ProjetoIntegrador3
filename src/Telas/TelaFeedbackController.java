@@ -97,7 +97,7 @@ public class TelaFeedbackController implements Initializable {
     private void entrar(ActionEvent event) throws IOException, Exception {
         
                 mandaAvaliacao(TelaLoginController.idEquip, avalia);
-         
+                
                 FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass().getResource("/Telas/TelaHome.fxml"));
 		Parent root = loader.load();
@@ -122,7 +122,7 @@ public class TelaFeedbackController implements Initializable {
     @FXML
     private void guardaCor1(ActionEvent event) {
     
-        avalia = 1;
+        avalia = 2;
         insereCor(1);
     }
 
@@ -132,7 +132,7 @@ public class TelaFeedbackController implements Initializable {
 
     @FXML
     private void guardaCor2(ActionEvent event) {
-        avalia = 2;
+        avalia = 4;
         
         insereCor(2);
     }
@@ -144,7 +144,7 @@ public class TelaFeedbackController implements Initializable {
 
     @FXML
     private void guardaCor3(ActionEvent event) {
-        avalia = 3;
+        avalia = 6;
         
         insereCor(3);
     }
@@ -157,7 +157,7 @@ public class TelaFeedbackController implements Initializable {
     private void guardaCor4(ActionEvent event) {
         
         insereCor(4);
-        avalia = 4;
+        avalia = 8;
     }
 
     @FXML
@@ -168,7 +168,7 @@ public class TelaFeedbackController implements Initializable {
     private void guardaCor5(ActionEvent event) {
         
         insereCor(5);
-        avalia = 5;
+        avalia = 10;
     }
 
     @FXML
@@ -186,6 +186,8 @@ public class TelaFeedbackController implements Initializable {
          bt4.setStyle(bt2.getStyle() + "-fx-background-color: #dadada;");
          bt5.setStyle(bt2.getStyle() + "-fx-background-color: #dadada;");
         
+            System.out.println(bt1.getStyle());
+            System.out.println(bt1.getWidth());
         
         
         }

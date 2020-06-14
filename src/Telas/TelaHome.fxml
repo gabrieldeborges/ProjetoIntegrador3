@@ -32,11 +32,11 @@
             <Image url="@../Imagens/user.png" />
          </image>
       </ImageView>
-      <TableView fx:id="tblAtivos" layoutX="112.0" layoutY="132.0" prefHeight="224.0" prefWidth="622.0">
+      <TableView fx:id="tblAtivos" layoutX="112.0" layoutY="132.0" prefHeight="224.0" prefWidth="607.0">
         <columns>
           <TableColumn fx:id="colunaEspaço" prefWidth="170.0" text="Espaço" />
           <TableColumn fx:id="tbunidade" prefWidth="317.0" text="Unidade" />
-            <TableColumn fx:id="colunaData" prefWidth="134.0" text="Data do aluguel" />
+            <TableColumn fx:id="colunaData" prefWidth="134.0" text="Data" />
         </columns>
       </TableView>
       <Text layoutX="296.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SEUS ALUGUEIS ATIVOS">

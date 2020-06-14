@@ -11,6 +11,8 @@ public class Ativos {
 private String unidade;
 private String DataAluguel;
 
+ 
+
     public String getEspaco() {
         return Espaco;
     }
@@ -35,7 +37,7 @@ private String DataAluguel;
         this.DataAluguel = DataAluguel;
     }
 
-
+    
 
     
 }

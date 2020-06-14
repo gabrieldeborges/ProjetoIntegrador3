@@ -37,7 +37,7 @@ public class GerenciamentoUsuario {
     //Monta a string de inserção de um cliente no BD,
         //utilizando os dados do clientes passados como parâmetro
       
-        try{
+       
         String sql = "INSERT INTO usuarios (NOME,SOBRENOME, EMAIL, SENHA, SEXO, CIDADE_NASC , "
                 + "UF_NASC, DATA_NASC, CPF, NOME_MAE, ESPORTE_FAVORITO, UNIDADE_FAVORITA, CEP, ENDERECO, COMPLEMENTO,"
                 + "NUMERO_ENDE, BAIRRO, CIDADE, SITUACAO_CADASTRO, UF) "
@@ -94,12 +94,7 @@ public class GerenciamentoUsuario {
 
         //Fecha a conexão
         connection.close();
-        } 
-        catch (Exception e) {
-            
-            
-            
-            }
+       
 
     }
 

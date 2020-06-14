@@ -146,7 +146,7 @@ public class TelaCadastroUsuarioController implements Initializable {
             usuario.unidadePref = (String) cbUnidadePref.getValue();
             usuario.esportePref = (String) cbEsportePref.getValue();
             usuario.Sexo = cbSexo.getValue();
-            teste = Validacoes.validarCampoVazio(usuario.propNome, usuario.propEmail, usuario.propSenha);
+            //teste = Validacoes.validarCampoVazio(usuario.propNome, usuario.propEmail, usuario.propSenha);
 
         };
         gerUsuario.inserir(usuario);

@@ -1,5 +1,6 @@
 package Gerenciamento;
 
+import Objetos.Ativos;
 import Objetos.FeedBack;
 import Objetos.Operacao;
 import Objetos.Usuario;
@@ -389,5 +390,152 @@ public class GerenciamentoOperacao {
 
         //Retorna a lista de clientes do banco de dados
         return listaUnidade;
-    }     
+    }
+           
+         public static List<Ativos> listarPorUser(int id)
+            throws Exception {
+
+        //Monta a string de listagem de clientes no banco, considerando
+        //apenas a coluna de ativação de clientes ("enabled")
+        String sql = "SELECT * FROM alugueis where ID_USUARIO = ?";
+
+        //Lista de clientes de resultado
+        List<Ativos> listaUser = null;
+
+        //Conexão para abertura e fechamento
+        Connection connection = null;
+
+        PreparedStatement preparedStatement = null;
+
+        ResultSet result = null;
+
+        connection = ConnectionUtils.getConnection();
+
+        //Cria um statement para execução de instruçães SQL
+        preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setInt(1, id);
+
+        
+        //Executa a consulta SQL no banco de dados
+        result = preparedStatement.executeQuery();
+
+        //Itera por cada item do resultado
+        while (result.next()) {
+
+            //Se a lista não foi inicializada, a inicializa
+            if (listaUser == null) {
+                listaUser = new ArrayList<Ativos>();
+            }
+
+            
+            
+            Ativos ativos = new Ativos();
+            
+            
+            int ID_EQUIP =(result.getInt("ID_EQUIPAMENTO"));
+            
+            ativos.setUnidade(trazEquip(ID_EQUIP));
+            System.out.println("adc equip "+ ativos.getUnidade()) ;
+            ativos.setEspaco(trazTipo(ID_EQUIP));
+            ativos.setDataAluguel(result.getString("DATA"));
+            
+                        listaUser.add(ativos);
+                        if(listaUser == null){
+                            System.out.println("ESTA NULO");
+                        }
+
+        }
+
+        //Fecha o result        
+        result.close();
+
+        //Fecha o statement
+        preparedStatement.close();
+
+        //Fecha a conexão
+        connection.close();
+
+        //Retorna a lista de clientes do banco de dados
+        return listaUser;
+    }  
+           
+         
+         
+         
+         //vai retornar o espaço e o tipo do espaço
+         public static String trazEquip(int id)
+            throws Exception {
+
+             
+             String unidade = null;
+        //Monta a string de listagem de clientes no banco, considerando
+        //apenas a coluna de ativação de clientes ("enabled")
+        String sql = "SELECT * FROM listas_equipamentos where ID = ?";
+
+        //Lista de clientes de resultado
+     
+
+        //Conexão para abertura e fechamento
+        Connection connection = null;
+
+        PreparedStatement preparedStatement = null;
+
+        ResultSet result = null;
+
+        connection = ConnectionUtils.getConnection();
+
+        //Cria um statement para execução de instruçães SQL
+        preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setInt(1, id);
+        result = preparedStatement.executeQuery();
+
+        while (result.next()) {
+            Ativos ativos = new Ativos();
+            unidade =(result.getString("UNIDADE_ESPORTIVA"));
+        }
+        result.close();
+
+        preparedStatement.close();
+        connection.close();
+
+        return unidade;
+    }  
+          public static String trazTipo(int id)
+            throws Exception {
+
+             
+             String modalidade = null;
+        //Monta a string de listagem de clientes no banco, considerando
+        //apenas a coluna de ativação de clientes ("enabled")
+        String sql = "SELECT * FROM listas_equipamentos where ID = ?";
+
+        //Lista de clientes de resultado
+     
+
+        //Conexão para abertura e fechamento
+        Connection connection = null;
+
+        PreparedStatement preparedStatement = null;
+
+        ResultSet result = null;
+
+        connection = ConnectionUtils.getConnection();
+
+        //Cria um statement para execução de instruçães SQL
+        preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.setInt(1, id);
+        result = preparedStatement.executeQuery();
+
+        while (result.next()) {
+            Ativos ativos = new Ativos();
+            modalidade =(result.getString("Equipamentos"));
+        }
+        result.close();
+
+        preparedStatement.close();
+        connection.close();
+
+        return modalidade;
+    }  
+         
 }
