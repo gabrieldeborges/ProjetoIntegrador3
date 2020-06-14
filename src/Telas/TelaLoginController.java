@@ -45,7 +45,6 @@ public class TelaLoginController implements Initializable {
     }
 
     //Metodo para logar
-    @FXML
     private void mudarTela() throws IOException {
 
         Stage stage = new Stage();
@@ -123,10 +122,7 @@ public class TelaLoginController implements Initializable {
                 
         Stage fecha = (Stage) btEntrar.getScene().getWindow();
         fecha.close();
-            
-        
-        
-        
+    
                 }else{ 
         
 		idPassa = entrar;
@@ -146,9 +142,7 @@ public class TelaLoginController implements Initializable {
         Stage fecha = (Stage) btCadastrar.getScene().getWindow();
         fecha.close();
         
-                       
-            
-            
+      
             }
             }else{ Alertas.mostrarAlertas("Usuário incorreto", "Usuário não encontrado!",
                              "Verifique o login e senha e tente novamente", Alert.AlertType.ERROR);

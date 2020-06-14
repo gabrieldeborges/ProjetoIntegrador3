@@ -7,25 +7,23 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<?import javafx.scene.text.TextFlow?>
 
-<StackPane prefHeight="252.0" prefWidth="387.0" style="-fx-background-color: #BDEBE2;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Telas.SplashCarregarController">
+<StackPane prefHeight="195.0" prefWidth="347.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Telas.SplashCarregarController">
    <children>
-      <AnchorPane id="AnchorPane" prefHeight="242.0" prefWidth="376.0" style="-fx-background-color: #BDEBE2;">
+      <AnchorPane id="AnchorPane" prefHeight="219.0" prefWidth="334.0" style="-fx-background-color: #fff;">
          <children>
-            <ProgressIndicator layoutX="164.0" layoutY="131.0" prefHeight="68.0" prefWidth="89.0" />
-            <TextFlow layoutY="46.0" prefHeight="31.0" prefWidth="200.0" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-            <Text fill="#00369a" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Carregando...">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Text>
-            <Text fill="#00369a" layoutX="75.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Carregando">
+            <Text fill="#00369a" layoutX="79.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Por favor">
                <font>
                   <Font size="42.0" />
                </font>
             </Text>
-            <Text fill="#00369a" layoutX="69.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informações">
+            <ProgressIndicator layoutX="137.0" layoutY="128.0" prefHeight="68.0" prefWidth="89.0" />
+            <Text fill="#00369a" layoutX="8.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Carregando...">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Text fill="#00369a" layoutX="84.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aguarde">
                <font>
                   <Font size="42.0" />
                </font>

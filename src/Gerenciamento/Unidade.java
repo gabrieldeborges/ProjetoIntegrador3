@@ -5,7 +5,7 @@ public class Unidade {
     private int id;
     private String Unidade;
     private String Bairro;
-    private int avaliacao;
+    private Double avaliacao;
     private String distancia;
 
     public int getId() {
@@ -34,13 +34,15 @@ public class Unidade {
         this.Bairro = Bairro;
     }
 
-    public int getAvaliacao() {
+    public Double getAvaliacao() {
         return avaliacao;
     }
 
-    public void setAvaliacao(int avaliacao) {
+    public void setAvaliacao(Double avaliacao) {
         this.avaliacao = avaliacao;
     }
+
+ 
 
     public String getDistancia() {
         return distancia;

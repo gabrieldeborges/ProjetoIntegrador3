@@ -22,7 +22,7 @@
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Text>
-      <Text fx:id="lblBemVindo" layoutX="616.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem vindo,">
+      <Text fx:id="lblBemVindo" layoutX="596.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem vindo,">
          <font>
             <Font size="16.0" />
          </font>

@@ -211,7 +211,7 @@ public class GerenciamentoUsuario {
             
             unid.setUnidade(result.getString("UNIDADE_ESPORTIVA"));
             unid.setBairro(result.getString("DISTRITO"));
-            unid.setAvaliacao(result.getInt("avaliacao"));
+            unid.setAvaliacao(result.getDouble("avaliacao"));
             unid.setId(result.getInt("ID"));
             String dist = verificaDistancia(result.getString("CEP"), cep);
             

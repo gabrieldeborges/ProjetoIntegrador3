@@ -122,7 +122,7 @@ public class TelaFeedbackController implements Initializable {
     @FXML
     private void guardaCor1(ActionEvent event) {
     
-        avalia = 2;
+        avalia = 1;
         insereCor(1);
     }
 
@@ -132,7 +132,7 @@ public class TelaFeedbackController implements Initializable {
 
     @FXML
     private void guardaCor2(ActionEvent event) {
-        avalia = 4;
+        avalia = 2;
         
         insereCor(2);
     }
@@ -144,7 +144,7 @@ public class TelaFeedbackController implements Initializable {
 
     @FXML
     private void guardaCor3(ActionEvent event) {
-        avalia = 6;
+        avalia = 3;
         
         insereCor(3);
     }
@@ -157,7 +157,7 @@ public class TelaFeedbackController implements Initializable {
     private void guardaCor4(ActionEvent event) {
         
         insereCor(4);
-        avalia = 8;
+        avalia = 4;
     }
 
     @FXML
@@ -168,7 +168,7 @@ public class TelaFeedbackController implements Initializable {
     private void guardaCor5(ActionEvent event) {
         
         insereCor(5);
-        avalia = 10;
+        avalia = 5;
     }
 
     @FXML

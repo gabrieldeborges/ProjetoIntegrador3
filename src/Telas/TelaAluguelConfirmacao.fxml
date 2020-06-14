@@ -9,41 +9,41 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="431.0" prefWidth="557.0" style="-fx-background-color: #58AF9C;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Telas.TelaAluguelConfirmacaoController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="429.0" prefWidth="669.0" style="-fx-background-color: #58AF9C;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Telas.TelaAluguelConfirmacaoController">
    <children>
-      <Label layoutX="221.0" layoutY="110.0" text="Escolha a unidade" textFill="WHITE">
+      <Label layoutX="278.0" layoutY="110.0" text="Escolha a unidade" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font></Label>
-      <Label layoutX="190.0" layoutY="299.0" text="Escolha a data do aluguel" textFill="WHITE">
+      <Label layoutX="263.0" layoutY="301.0" text="Escolha a data do aluguel" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font></Label>
-      <DatePicker fx:id="dtData" layoutX="177.0" layoutY="324.0" prefHeight="25.0" prefWidth="188.0" style="-fx-background-radius: 15;" />
-      <Button fx:id="btConfirmar" layoutX="208.0" layoutY="388.0" mnemonicParsing="false" onAction="#realizaAluguel" style="-fx-background-color: #BDEBE2; -fx-background-radius: 15;" text="Confirmar Aluguel">
+      <DatePicker fx:id="dtData" layoutX="250.0" layoutY="326.0" prefHeight="25.0" prefWidth="188.0" style="-fx-background-radius: 15;" />
+      <Button fx:id="btConfirmar" layoutX="283.0" layoutY="387.0" mnemonicParsing="false" onAction="#realizaAluguel" style="-fx-background-color: #BDEBE2; -fx-background-radius: 15;" text="Confirmar Aluguel">
          <font>
             <Font size="13.0" />
          </font>
       </Button>
-      <TableView fx:id="tblUnidades" layoutX="9.0" layoutY="134.0" prefHeight="156.0" prefWidth="538.0">
+      <TableView fx:id="tblUnidades" layoutX="11.0" layoutY="137.0" prefHeight="156.0" prefWidth="647.0">
         <columns>
-          <TableColumn fx:id="colunaUnidade" prefWidth="110.0" text="Unidade" />
-          <TableColumn fx:id="colunaBairro" prefWidth="167.0" text="Bairro" />
-            <TableColumn fx:id="colunaAvaliacao" prefWidth="134.0" text="Avaliação" />
-            <TableColumn fx:id="distancia" prefWidth="124.0" text="Distância do seu CEP" />
-            <TableColumn fx:id="colunaID" prefWidth="146.0" text="ID" />
+          <TableColumn fx:id="colunaUnidade" prefWidth="204.0" text="Unidade" />
+          <TableColumn fx:id="colunaBairro" prefWidth="115.0" text="Bairro" />
+            <TableColumn fx:id="colunaAvaliacao" prefWidth="213.0" text="Avaliação" />
+            <TableColumn fx:id="distancia" prefWidth="110.0" text="Distância" />
+            <TableColumn fx:id="colunaID" prefWidth="39.0" text="ID" />
         </columns>
       </TableView>
-      <TextField fx:id="txtCEPMANDA" layoutX="140.0" layoutY="60.0" prefHeight="25.0" prefWidth="233.0" promptText="Digite aqui o seu CEP" style="-fx-background-color: #e6f7ed;" />
-      <Label layoutX="59.0" text="Digite seu CEP para verificarmos as unidades disponíveis" textFill="WHITE">
+      <TextField fx:id="txtCEPMANDA" layoutX="185.0" layoutY="75.0" prefHeight="25.0" prefWidth="233.0" promptText="Digite aqui o seu CEP" style="-fx-background-color: #e6f7ed;" />
+      <Label layoutX="119.0" layoutY="14.0" text="Digite seu CEP para verificarmos as unidades disponíveis" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font></Label>
-      <Label layoutX="198.0" layoutY="25.0" text="Mais próxima de você!" textFill="WHITE">
+      <Label layoutX="258.0" layoutY="39.0" text="Mais próxima de você!" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
-      <Button layoutX="382.0" layoutY="60.0" mnemonicParsing="false" onAction="#buscarDistancia" style="-fx-background-color: #fff;" text="Buscar" />
+      <Button layoutX="427.0" layoutY="75.0" mnemonicParsing="false" onAction="#buscarDistancia" style="-fx-background-color: #fff;" text="Buscar" />
    </children>
 </AnchorPane>

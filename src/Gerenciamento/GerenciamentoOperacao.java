@@ -5,6 +5,7 @@ import Objetos.FeedBack;
 import Objetos.Operacao;
 import Objetos.Usuario;
 import Objetos.telaFeed;
+import Telas.TelaAluguelConfirmacaoController;
 import api.root;
 import com.google.gson.Gson;
 import java.io.BufferedReader;
@@ -19,6 +20,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
+import org.controlsfx.control.Rating;
 
 public class GerenciamentoOperacao {
     
@@ -58,7 +60,8 @@ public class GerenciamentoOperacao {
         
         //Executa a consulta SQL no banco de dados
         result = preparedStatement.executeQuery();
-
+        Rating r = null;
+        double aval = 0;
         //Itera por cada item do resultado
         while (result.next()) {
 
@@ -72,7 +75,9 @@ public class GerenciamentoOperacao {
             
             unid.setUnidade(result.getString("UNIDADE_ESPORTIVA"));
             unid.setBairro(result.getString("DISTRITO"));
-            unid.setAvaliacao(result.getInt("avaliacao"));
+            unid.setAvaliacao(result.getDouble("avaliacao"));
+            aval = unid.getAvaliacao();
+            TelaAluguelConfirmacaoController.makeRating(aval);
             unid.setId(result.getInt("ID"));
             String dist = verificaDistancia(result.getString("CEP"), cep);
             
@@ -370,7 +375,7 @@ public class GerenciamentoOperacao {
             
             unid.setUnidade(result.getString("UNIDADE_ESPORTIVA"));
             unid.setBairro(result.getString("DISTRITO"));
-            unid.setAvaliacao(result.getInt("avaliacao"));
+            unid.setAvaliacao(result.getDouble("avaliacao"));
             unid.setId(result.getInt("ID"));
             String dist = verificaDistancia(result.getString("CEP"), cep);
             
